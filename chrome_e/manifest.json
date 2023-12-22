@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "bored",
+    "description": "광고를 숨겨서 화면을 넓게 써보자. 광고 허용 요청 삭제, 스크롤 고정 풀기. 눈에서만 숨길뿐.",
+    "version": "0.1",
+    "icons": {
+        "48": "./images/ico_danger.png",
+        "96": "./images/ico_danger.png"
+    },
+    "action" : {
+        "default_icon" : "./images/32.png",
+        "default_title" : "bored"
+    },
+    "permissions" : ["storage","activeTab"],
+    "content_scripts" : [
+       {
+        "matches": ["<all_urls>"],
+        "js": ["scripts/inject.js"]
+       }
+    ]
+}
