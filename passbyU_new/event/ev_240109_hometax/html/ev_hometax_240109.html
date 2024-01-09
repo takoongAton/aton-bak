@@ -26,7 +26,8 @@
 		.ev_240109 .preview_wrap div.txt img {width:13.1em}
 
 		.ev_240109 .passreview_wrap {padding-bottom:5.5em; background:#ebebeb;}
-		.ev_240109 .passreview_wrap .review_slick_wrap {padding:1em; overflow:hidden;}
+		.ev_240109 .passreview_wrap .review_slick_wrap {position:relative; padding:1em; overflow:hidden;}
+		.ev_240109 .passreview_wrap .review_slick_wrap::before {content:""; display:block; position:absolute; top:0; right:0; bottom:0; left:0; background-color:rgba(255,255,255,0); z-index:10;}
 		.ev_240109 .passreview_wrap .review_slick_wrap div.list {padding:1em 1em; border-radius:1em; background-color:#fff; overflow:hidden;}
 		.ev_240109 .passreview_wrap .review_slick_wrap div.list div.item {margin-bottom:0.825em; padding-bottom:0.825em; opacity:0.3; transition:all 0.2s ease;}
 		/* .ev_240109 .passreview_wrap .review_slick_wrap div.list div.item.bb {margin-bottom:0.725em; padding-bottom:0.725em;} */
@@ -146,7 +147,9 @@
 			slidesToScroll: 1,
 			vertical: true,
 			verticalSwiping:true,
-			adaptiveHeight: true
+			adaptiveHeight: true,
+			draggable:'false',
+			touchMove:'false',
 		});
 
 	})
