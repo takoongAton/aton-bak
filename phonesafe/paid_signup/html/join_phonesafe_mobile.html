@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 
 	<link rel="stylesheet" href="../css/reset.css">
-	<link rel="stylesheet" href="../css/couponpack_join.css">
+	<link rel="stylesheet" href="../css/phonesafe_join.css">
 
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=block">
 
@@ -16,7 +16,7 @@
 </head>
 <body>
 	
-<div class="couponPack_join_wrap">
+<div class="phonesafe_join_wrap">
 	<header>
 		<dl>
 			<dt class="h1_wrap">
@@ -672,7 +672,7 @@ $(document).ready(function(){
 
 	// 의도 : 통신사 선택시 통신사별 내용으로 교체 (개발에 적용 불가)
 	var telecom_tab_idx = 0;
-	var telecom_tab = $(".couponPack_join_wrap .radio li");
+	var telecom_tab = $(".phonesafe_join_wrap .radio li");
 	telecom_tab.each(function(){
 		var telecom_tab_idx = telecom_tab.index($(this));
 		$(this).on("click", function(){
