@@ -705,6 +705,8 @@ footer div.f_alert p::before {content:"·"; display:block; position:absolute; to
 .cpp_pass_wrap .cpp_pass_tit p.subtit {margin-top:0.28571em; color:#999; font-size:0.875em; line-height:1.42857em;}
 
 
+
+/* 기존 내용 삭제
 .cpp_pass_wrap .cpp_pass_visual {display:flex; justify-content:space-between; padding:1.875em 1.125em; background-color:#f0f2f4;}
 .cpp_pass_wrap .cpp_pass_visual * {vertical-align:top;}
 .cpp_pass_wrap .cpp_pass_visual .box {width:11.375em; padding:1em 0 0.75em; background-color:#fff; border-radius:0.625em; text-align:center;}
@@ -716,7 +718,7 @@ footer div.f_alert p::before {content:"·"; display:block; position:absolute; to
 .cpp_pass_wrap .cpp_pass_visual .box p strong {display:block;}
 .cpp_pass_wrap .cpp_pass_visual .box p strong i {display:inline-block; color:#FF3A4A; font-size:1.25em; padding:0 0.125em;}
 .cpp_pass_wrap .cpp_pass_visual .box .icon_wrap {position:relative; margin-top:0.75em; padding:0.5em 0 0 ;}
-.cpp_pass_wrap .cpp_pass_visual .box .icon_wrap > span {display:inline-block; position:relative; /* width:2.5em; */ height:2.5em; line-height:1em;}
+.cpp_pass_wrap .cpp_pass_visual .box .icon_wrap > span {display:inline-block; position:relative; height:2.5em; line-height:1em;}
 .cpp_pass_wrap .cpp_pass_visual .box .icon_wrap::before {content:""; display:block; position:absolute; top:0; left:5px; right:5px; height:1px; background-color:#ddd; transform:translateY(-50%);}
 .cpp_pass_wrap .cpp_pass_visual .box .icon_wrap img {width:auto; height:2.5em;}
 .cpp_pass_wrap .cpp_pass_visual .box span.em {display:inline-block; height:1.8em; margin-top:0.9em; padding:0 0.8em; background-color:#555; border-radius:10em; color:#fff; font-size:0.625em; line-height:1.8em; font-weight:700; overflow:hidden;}
@@ -767,3 +769,8 @@ footer div.f_alert p::before {content:"·"; display:block; position:absolute; to
 .cpp_pass_wrap .cpp_pass_alert dt {font-size:0.875em;}
 .cpp_pass_wrap .cpp_pass_alert dt + dd {margin-top:0.25em;}
 .cpp_pass_wrap .cpp_pass_alert dd p {color:#999; font-size:0.875em;}
+*/
+
+.header_tab {padding:0 21px;}
+.header_tab ul {gap:18px;}
+.header_tab ul li {width:auto;}

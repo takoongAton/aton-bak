@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>PASS by U+</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/cp_common.css">
+	<link rel="stylesheet" href="../css/slick.css">
+
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=block">
+
+<style>
+
+/* 가로 스크롤 형식 공통 */
+.scroll-wrapper {overflow-y:hidden; overflow-x:auto; -webkit-overflow-scrolling:touch;}
+.scroll-wrapper::-webkit-scrollbar {display:none !important;}
+.scroll-wrapper .scroll {display:-webkit-inline-box; display:-webkit-inline-flex; display:inline-flex;}
+.scroll-wrapper .scroll .item {white-space:nowrap;} /* 구분 칸 */
+/* 가로 스크롤 형식 공통 */
+
+
+.coupon_main_new_wrap {background-color:#f5f5f5; padding-bottom:11px;}
+/* 쿠폰팩 메인 배너 트리거 */
+.slider_nav_wrap {padding:20px 0px; font-size:0;}
+.slider-nav .item {text-align:center;}
+.slider-nav .item .inner {display:inline-block; padding:0 5px;}
+.slider-nav button {position:relative; min-width:60px; background-color:#fff; padding:1px; background-color:none; border-radius:100%; overflow:hidden; transition:all 0.2s ease;}
+.slider-nav .slick-track {display:flex; align-items:center;}
+.slider-nav .slick-slide {transform:scale(0.9); transition: all 0.2s ease; }
+.slider-nav .slick-slide img {transition: all 0.2s ease;}
+.slider-nav .slick-slide.slick-current {transform:scale(1);}
+.slider-nav .slick-current button {padding:2.5px; background:linear-gradient(#6250FF 0, #58A3FF 50%, #50EBFF 100%)}
+/* 쿠폰팩 메인 배너 트리거 */
+
+/* 쿠폰팩 메인 배너 컨텐츠 */
+.slider_for_wrap {height:0;  padding:0 20px; transition:all 0.2s ease; overflow:hidden;}
+.slider_for_wrap div.item {position:relative; border-radius:10px; overflow:hidden;}
+.slider_for_wrap div.item div.img_wrap {position:relative;}
+.slider_for_wrap div.item div.img_wrap button.alert {position:absolute; top:67.2043%; left:5.55555%; width:17.28395%; border-radius:100px; line-height:1; overflow:hidden;}
+.slider_for_wrap div.item div.img_wrap button.alert span {}
+.slider_for_wrap div.item button.subscribe {height:60px; background-color:#000;}
+.slider_for_wrap div.item button.subscribe strong {display:flex; justify-content:center; align-items:center; height:48px; border-radius:8px 2px; color:#fff; font-size:1.125em; overflow:hidden;}
+.slider_for_wrap .slider-for .slick-slide {transform:scale(0.9); transition: all 0.2s ease;}
+.slider_for_wrap .slider-for .slick-slide > div {line-height:1;}
+.slider_for_wrap .slider-for .slick-slide.slick-current {transform:scale(1);}
+.slider_for_wrap.active {height:auto;}
+.slider_for_wrap img {vertical-align:top;}
+/* // 쿠폰팩 메인 배너 컨텐츠 */
+
+
+/* 인기 쿠폰팩 */
+.favorite_wrap {padding-top:12px; background-color:#f5f5f5;}
+.favorite_wrap div.tit {display:flex; align-items:center; height:60px; padding:0 18px;}
+.favorite_wrap div.tit span.icon {display:block; width:24px; height:24px; }
+.favorite_wrap div.tit strong {padding-left:8px; font-size:16px; font-weight:bold;}
+.favorite_wrap .list {display:flex; align-items:center; gap:10px; padding:0;}
+.favorite_wrap .list > div {line-height:1;}
+.favorite_wrap .list .item {line-height:1; border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.08);}
+.favorite_wrap .list .item button {width:auto; height:auto;}
+.favorite_wrap .list .item img {display:block; width:174px;}
+.favorite_wrap .list .slick-slide {padding:0 0 13px 18px; overflow:hidden;}
+/* // 인기 쿠폰팩 */
+
+
+/* 카테고리별 쿠폰팩 */
+.category_wrap {}
+.category_wrap .tab_trigers {padding:24px 18px;}
+.category_wrap .tab_trigers li {display:inline-block;;}
+.category_wrap .tab_trigers li + li {padding-left:6px;}
+.category_wrap .tab_trigers button {width:auto; height:36px; padding:0 1em; border:1px solid #ddd; border-radius:18px;}
+.category_wrap .tab_trigers button span {font-size:14px; white-space:nowrap;}
+.category_wrap .tab_trigers button.active {background-color:#000; border-color:transparent;}
+.category_wrap .tab_trigers button.active span {font-weight:bold; color:#fff;}
+.category_wrap .tab_content {padding:0 18px;}
+.category_wrap .tab_content .content_group {display:flex; flex-direction:column; width:100%; gap:10px;}
+.category_wrap .tab_content .item {display:flex; align-items:center; position:relative; gap:8.4%; padding:24px 18px; border:1px solid #f0f0f0; border-radius:6px;}
+.category_wrap .tab_content .item.link::before {content:""; display:block; position:absolute; top:50%; right:18px; width:16px; height:16px; background:url('../images/btn_cp_r.png') no-repeat left top / contain; transform:translateY(-50%);}
+.category_wrap .tab_content .item .logo {min-width:50px; width:50px; max-width:50px;}
+.category_wrap .tab_content .item .logo img {border-radius:100%; width:50px; height:50px;}
+.category_wrap .tab_content .item .txt_wrap {flex:1;}
+.category_wrap .tab_content .item .txt_wrap p.tit {display:flex; align-items:flex-end; gap:4px;}
+.category_wrap .tab_content .item .txt_wrap p.tit strong {color:#000; font-size:16px; line-height:24px; font-weight:bold;}
+.category_wrap .tab_content .item .txt_wrap p.tit span {position:relative; top:-1px; padding-left:0.92307em; color:#888; font-size:13px; line-height:19px; font-weight:bold;}
+.category_wrap .tab_content .item .txt_wrap p.tit span::before, 
+.category_wrap .tab_content .item .txt_wrap p.tit span::after {content:""; display:block; position:absolute; top:50%; left:2px; width:8px; height:2px; background-color:#ddd;}
+.category_wrap .tab_content .item .txt_wrap p.tit span::before {transform:translateY(-50%);}
+.category_wrap .tab_content .item .txt_wrap p.tit span::after {transform:translateY(-50%) rotate(-90deg);}
+.category_wrap .tab_content .item .txt_wrap div {display:flex; justify-content:flex-start; align-items:center; gap:4px; margin-top:6px;}
+.category_wrap .tab_content .item .txt_wrap .couponSale {display:inline-flex; align-items:baseline; min-width:46px; height:20px; padding:0 14px 0 4px; background:#fc3a4a url('../images/icon_arrow_dn.png') no-repeat right 4px bottom 5px / 7px auto; border-radius:3px; color:#fff;}
+.category_wrap .tab_content .item .txt_wrap .couponSale strong {font-size:13px}
+.category_wrap .tab_content .item .txt_wrap del {color:#bbb; font-size:12px; font-weight:300;}
+.category_wrap .tab_content .item .txt_wrap .couponPrice strong {color:#000; font-size:14px;}
+.category_wrap .tab_content button.btn_more {height:48px; margin-top:20px; background-color:#F0F2F4; border-radius:24px;}
+.category_wrap .tab_content button.btn_more span {color:#000; font-size:1em;}
+/* 카테고리별 쿠폰팩 */
+
+
+/* 새로 나온 쿠폰팩 */
+.new_coupon_wrap {padding-top:12px; background-color:#fff;}
+.new_coupon_wrap div.tit {display:flex; align-items:center; height:60px; padding:0 18px;}
+.new_coupon_wrap div.tit span.icon {display:block; width:24px; height:24px; }
+.new_coupon_wrap div.tit strong {padding-left:8px; font-size:16px; font-weight:bold;}
+.new_coupon_wrap .list {display:flex; align-items:center; gap:10px; padding:0;}
+.new_coupon_wrap .list > div {line-height:1;}
+.new_coupon_wrap .list .item {line-height:1; border-radius:10px;}
+.new_coupon_wrap .list .item button {width:auto; height:auto;}
+.new_coupon_wrap .list .item img {display:block; width:174px;}
+.new_coupon_wrap .list .slick-slide {padding:0 0 0 18px; overflow:hidden;}
+/* // 새로 나온 쿠폰팩 */
+</style>
+</head>
+<body>
+
+<div class="cp_wrap">
+	<div class="cp_header"><img src="../images/temp/top.png" alt="샘플" /></div><!-- 개발시 삭제 -->
+
+	<div class="header_tab">
+		<ul class="col3">
+			<li class="on"><span>홈</span></li>
+			<li><span>쿠폰 관리</span></li>
+			<li><span>내 구독 쿠폰</span></li>
+			<li><span>전체</span></li>
+		</ul>
+	</div>
+
+
+	<div class="coupon_main_new_wrap">
+		<div class="slider_nav_wrap">
+			<div class="slider-nav">
+				<div class="item">
+					<div class="inner"><button type="button" class="btn_click"><span><img src="../images/brand_icon/ico_cgv.png" alt="CGV 아이콘"></span></button></div>
+				</div>
+				<div class="item">
+					<div class="inner"><button type="button" class="btn_click"><span><img src="../images/brand_icon/ico_cu.png" alt="CU 아이콘"></span></button></div>
+				</div>
+				<div class="item">
+					<div class="inner"><button type="button" class="btn_click"><span><img src="../images/brand_icon/ico_daiso.png" alt="다이소 아이콘"></span></button></div>
+				</div>
+				<div class="item">
+					<div class="inner"><button type="button" class="btn_click"><span><img src="../images/brand_icon/ico_ediya.png" alt="이디야커피 아이콘"></span></button></div>
+				</div>
+				<div class="item">
+					<div class="inner"><button type="button" class="btn_click"><span><img src="../images/brand_icon/ico_emart.png" alt="이마트 아이콘"></span></button></div>
+				</div>
+				<div class="item">
+					<div class="inner"><button type="button" class="btn_click"><span><img src="../images/brand_icon/ico_gs25.png" alt="GS25 아이콘"></span></button></div>
+				</div>
+				<div class="item">
+					<div class="inner"><button type="button" class="btn_click"><span><img src="../images/brand_icon/ico_gsctx.png" alt="GS칼텍스 아이콘"></span></button></div>
+				</div>
+				<div class="item">
+					<div class="inner"><button type="button" class="btn_click"><span><img src="../images/brand_icon/ico_krispy.png" alt="크리스피크림도넛 아이콘"></span></button></div>
+				</div>
+				<div class="item">
+					<div class="inner"><button type="button" class="btn_click"><span><img src="../images/brand_icon/ico_paris.png" alt="파리바게뜨 아이콘"></span></button></div>
+				</div>
+				<div class="item">
+					<div class="inner"><button type="button" class="btn_click"><span><img src="../images/brand_icon/ico_seven.png" alt="세븐일레븐 아이콘"></span></button></div>
+				</div>
+			</div>
+		</div>
+		<!-- // slider_nav_wrap -->
+	
+	
+		<div class="slider_for_wrap active">
+			<div class="slider-for">
+				<div class="item">
+					<div class="img_wrap">
+						<div class="img"><img src="../images/sample/img_home_cgv.png" alt="CGV 쿠폰팩 41% 할인"></div>
+						<button type="button" class="alert"><span><img src="../images/ico_caution.png" alt="유의사항"></span></button>
+					</div>
+					<button type="button" class="subscribe"><strong>구독하기</strong></button>
+				</div>
+				<div class="item">
+					<div class="img_wrap">
+						<div class="img"><img src="../images/sample/img_home_cu.png" alt="CU 쿠폰팩 17% 할인"></div>
+						<button type="button" class="alert"><span><img src="../images/ico_caution.png" alt="유의사항"></span></button>
+					</div>
+					<button type="button" class="subscribe"><strong>구독하기</strong></button>
+				</div>
+				<div class="item">
+					<div class="img_wrap">
+						<div class="img"><img src="../images/sample/img_home_daiso.png" alt="다이소 쿠폰팩 17% 할인"></div>
+						<button type="button" class="alert"><span><img src="../images/ico_caution.png" alt="유의사항"></span></button>
+					</div>
+					<button type="button" class="subscribe"><strong>구독하기</strong></button>
+				</div>
+				<div class="item">
+					<div class="img_wrap">
+						<div class="img"><img src="../images/sample/img_home_ediya.png" alt="이디야커피 쿠폰팩 28% 할인"></div>
+						<button type="button" class="alert"><span><img src="../images/ico_caution.png" alt="유의사항"></span></button>
+					</div>
+					<button type="button" class="subscribe"><strong>구독하기</strong></button>
+				</div>
+				<div class="item">
+					<div class="img_wrap">
+						<div class="img"><img src="../images/sample/img_home_emart.png" alt="이마트 쿠폰팩 17% 할인"></div>
+						<button type="button" class="alert"><span><img src="../images/ico_caution.png" alt="유의사항"></span></button>
+					</div>
+					<button type="button" class="subscribe"><strong>구독하기</strong></button>
+				</div>
+				<div class="item">
+					<div class="img_wrap">
+						<div class="img"><img src="../images/sample/img_home_gs25.png" alt="GS25 쿠폰팩 17% 할인"></div>
+						<button type="button" class="alert"><span><img src="../images/ico_caution.png" alt="유의사항"></span></button>
+					</div>
+					<button type="button" class="subscribe"><strong>구독하기</strong></button>
+				</div>
+				<div class="item">
+					<div class="img_wrap">
+						<div class="img"><img src="../images/sample/img_home_gsctx.png" alt="GS칼텍스 쿠폰팩 70% 할인"></div>
+						<button type="button" class="alert"><span><img src="../images/ico_caution.png" alt="유의사항"></span></button>
+					</div>
+					<button type="button" class="subscribe"><strong>구독하기</strong></button>
+				</div>
+				<div class="item">
+					<div class="img_wrap">
+						<div class="img"><img src="../images/sample/img_home_krispy.png" alt="크리스피크림도넛 쿠폰팩 23% 할인"></div>
+						<button type="button" class="alert"><span><img src="../images/ico_caution.png" alt="유의사항"></span></button>
+					</div>
+					<button type="button" class="subscribe"><strong>구독하기</strong></button>
+				</div>
+				<div class="item">
+					<div class="img_wrap">
+						<div class="img"><img src="../images/sample/img_home_paris.png" alt="파리바게뜨 쿠폰팩 17% 할인"></div>
+						<button type="button" class="alert"><span><img src="../images/ico_caution.png" alt="유의사항"></span></button>
+					</div>
+					<button type="button" class="subscribe"><strong>구독하기</strong></button>
+				</div>
+				<div class="item">
+					<div class="img_wrap">
+						<div class="img"><img src="../images/sample/img_home_seven.png" alt="세븐일레븐 쿠폰팩 17% 할인"></div>
+						<button type="button" class="alert"><span><img src="../images/ico_caution.png" alt="유의사항"></span></button>
+					</div>
+					<button type="button" class="subscribe"><strong>구독하기</strong></button>
+				</div>
+			</div>
+		</div>
+		<!-- // slider_for_wrap -->
+
+		<div class="favorite_wrap">
+			<div class="tit"><span class="icon"><img src="../images/ico_popular.png" alt="즐겨찾기"></span><strong>인기 쿠폰팩</strong></div>
+			<div class="list">
+				<div class="item">
+					<button type="button"><img src="../images/sample/img_pop_gs25.png" alt="CU 쿠폰팩 17%할인"></button>
+				</div>
+				<div class="item">
+					<button type="button"><img src="../images/sample/img_pop_cu.png" alt="GS25 쿠폰팩 17%할인"></button>
+				</div>
+				<div class="item">
+					<button type="button"><img src="../images/sample/img_pop_gsctx.png" alt="GS칼텍스 쿠폰팩 70%할인"></button>
+				</div>
+			</div>
+		</div>
+		<!-- // favorite_wrap -->
+
+	</div>
+	<!-- // coupon_main_new_wrap -->
+
+	
+
+
+	
+
+
+	<div class="category_wrap">
+		<div class="scroll-wrapper">
+			<ul class="tab_trigers scroll">
+				<li class="item"><button type="button" class="active"><span>전체</span></button></li>
+				<li><button type="button"><span>커피</span></button></li>
+				<li><button type="button"><span>베이커리/도넛</span></button></li>
+				<li><button type="button"><span>주유</span></button></li>
+				<li><button type="button"><span>마트/편의점</span></button></li>
+				<li><button type="button"><span>영화</span></button></li>
+			</ul>
+		</div>
+
+		<div class="tab_content">
+			<div class="content_group">
+				<div class="item link">
+					<div class="logo"><img src="../images/brand_icon/ico_cgv.png" alt="다이소 로고"></div>
+					<div class="txt_wrap">
+						<p class="tit">
+							<strong>다이소 쿠폰팩</strong>
+							<span>무료팩</span>
+						</p>
+						<div>
+							<p class="couponSale">
+								<strong>17%</strong>
+							</p>
+							<del>월 12,000원</del>
+							<p class="couponPrice">
+								<strong>월 9,900원</strong>
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="item link">
+					<div class="logo"><img src="../images/brand_icon/ico_emart.png" alt="이마트 로고"></div>
+					<div class="txt_wrap">
+						<p class="tit">
+							<strong>이마트 쿠폰팩</strong>
+							<span>무료팩</span>
+						</p>
+						<div>
+							<p class="couponSale">
+								<strong>17%</strong>
+							</p>
+							<del>월 12,000원</del>
+							<p class="couponPrice">
+								<strong>월 9,900원</strong>
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="item link">
+					<div class="logo"><img src="../images/brand_icon/ico_gsctx.png" alt="GS칼텍스 로고"></div>
+					<div class="txt_wrap">
+						<p class="tit">
+							<strong>GS칼텍스 쿠폰팩</strong>
+							<span>무료팩</span>
+						</p>
+						<div>
+							<p class="couponSale">
+								<strong>70%</strong>
+							</p>
+							<del>월 34,000원</del>
+							<p class="couponPrice">
+								<strong>월 9,900원</strong>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- // content_group -->
+
+			<button type="button" class="btn_more"><span>더 보기</span></button>
+
+		</div>
+		<!-- // tab_content -->
+
+	</div>
+	<!-- // category_wrap -->
+
+
+	<div class="new_coupon_wrap">
+		<div class="tit"><strong>새로 나온 쿠폰팩</strong></div>
+		<div class="list">
+			<div class="item">
+				<button type="button"><img src="../images/sample/img_new_emart.png" alt="이마트 쿠폰팩 17% 할인"></button>
+			</div>
+			<div class="item">
+				<button type="button"><img src="../images/sample/img_new_daiso.png" alt="다이소 쿠폰팩 17% 할인"></button>
+			</div>
+		</div>
+	</div>
+	<!-- // new_coupon_wrap -->
+
+
+	<div class="couponPack_footer">
+		<ul>
+			<li><a href="#g"><span class="icon"><img src="../images/ico_notice.png" alt=""></span><span class="txt">공지사항</span></a></li>
+			<li><a href="#g"><span class="icon"><img src="../images/ico_faq.png" alt=""></span><span class="txt">자주 묻는 질문</span></a></li>
+			<li><a href="#g"><span class="icon"><img src="../images/ico_guide.png" alt=""></span><span class="txt">이용안내</span></a></li>
+		</ul>
+	</div>
+
+	<footer>
+		<div class="info">
+			<p>서비스 제공사 : (주)아톤</p>
+			<p>서비스 가입/이용/해지문의 : 080-869-4273(무료)</p>
+			<p class="email">atcs@atoncorp.com</p>
+			<p>본 서비스의 쿠폰 발행은 ㈜스퀘어노트에서 대행합니다.</p>
+		</div>
+		<div class="f_alert">
+			<ul>
+				<li><p>본 서비스는 가입 즉시 서비스가 개시되는 상품으로 청약철회가 불가능합니다. (전자상거래 등에서의 소비자보호에 관한 법률 제17조 2항 5호에 따라 디지털 콘텐츠의 제공이 개시된 경우 청약철회를 제공하지 않습니다.)</p></li>
+				<li><p>PASS 쿠폰팩은 제휴 혜택 유형의 패키지 상품으로 월 1회 선택된 상품의 혜택을 쿠폰으로 제공합니다.</p></li>
+				<li><p>패키지 상품은 제휴 회사의 사정에 따라 변경될 수 있습니다.</p></li>
+			</ul>
+		</div>
+	</footer>
+
+</div><!-- // cp_wrap -->
+<style>
+.coupon_alert {}
+.coupon_alert .layer_inner {position:fixed; top:50%; left:0; right:0; width:90%; height:auto; max-height:80vh; margin:0 auto; transform:translateY(-50%); background-color:#fff; border-radius:10px; z-index:10; overflow:auto;;}
+.coupon_alert .layer_inner div.layer_conner {width:100%;}
+.coupon_alert .layer_inner div.layer_conner div.tit {display:flex; justify-content:center; align-items:center; position:-webkit-sticky; position:sticky; top:0; left:0; width:100%; height:48px; background-color:#fff; text-align:center;}
+.coupon_alert .layer_inner div.layer_conner div.tit strong {color:#000; font-size:1em;}
+.coupon_alert .layer_inner div.layer_conner div.content {padding:10px; text-align:left; overflow-y:auto; white-space:pre-line; font-size:0.8125em;}
+</style>
+<div class="layer coupon_alert" id="test01" style="display:none;">
+	<div class="dim"></div>
+	<div class="layer_inner">
+		<div class="layer_conner">
+			<div class="tit"><strong>GS칼텍스 쿠폰팩</strong></div>
+			<div class="content">내용이 들어갑니다.
+				내용이 들어갑니다.
+				내용이 들어갑니다.
+				내용이 들어갑니다.
+				내용이 들어갑니다.
+				내용이 들어갑니다.
+				내용이 들어갑니다.
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- <script src="../js/jquery-1.12.4.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/slick.js"></script>
+
+
+<script src="../js/temp.js"></script>
+
+<script>
+
+$('.slider-for').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  infinite: true,
+  centerMode: false,
+//   fade: true,
+  asNavFor: '.slider-nav',
+});
+$('.slider-nav').slick({
+	slidesToShow: 5,
+	slidesToScroll: 1,
+	asNavFor: '.slider-for',
+	dots: false,
+	arrows: false,
+	centerMode: true,
+	focusOnSelect: true,
+	infinite: true,
+	autoplay: false,
+	autoplaySpeed: 1000,
+	centerPadding: '20px',
+	responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 5
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '20px',
+        slidesToShow: 5
+      }
+    },
+	{
+      breakpoint: 321,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 3
+      }
+    },
+	
+  ]
+});
+
+
+/* 유의사항 클릭시 */
+let btnAlerts = document.querySelectorAll(".slider_for_wrap div.item div.img_wrap button.alert");
+btnAlerts.forEach(function(item){
+	item.addEventListener("click", function(){
+		// alertText(item);
+		document.querySelector("#test01").style.display = "block";
+	})
+})
+/* // 유의사항 클릭시 */
+
+
+
+function alertText(item){
+	let img = item.querySelector("img");
+	if(img) {
+		if(img.getAttribute("title")) {
+			alert(img.getAttribute("title"))
+		} else {
+			alert(img.getAttribute("alt"))
+		}
+	} else {
+		alert(item.innerText)
+	}
+}
+
+
+
+
+$('.favorite_wrap .list').slick({
+	autoplay: false,
+	autoplaySpeed: 1000,
+	arrows: false,
+	dots: false,
+	infinite: true,
+	speed: 400,
+	centerMode: false,
+	centerPadding: '20px',
+	variableWidth: true,
+});
+
+
+$('.new_coupon_wrap .list').slick({
+	autoplay: false,
+	autoplaySpeed: 1000,
+	arrows: false,
+	dots: false,
+	infinite: true,
+	speed: 400,
+	centerMode: false,
+	centerPadding: '20px',
+	variableWidth: true,
+});
+
+
+document.querySelector(".dim").addEventListener("click", function(){
+	this.closest(".layer").style.display = "none";
+})
+
+
+// let btnToggle = document.querySelector(".btn_toggle");
+// btnToggle.addEventListener("click", function(){
+// 	btnToggle.classList.toggle("active");
+// 	document.querySelector(".slider_for_wrap").classList.toggle("active")
+// })
+</script>
+</body>
+</html>
