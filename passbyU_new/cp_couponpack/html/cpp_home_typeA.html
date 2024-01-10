@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>PASS by U+</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/cp_common.css">
+	<link rel="stylesheet" href="../css/slick.css">
+
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=block">
+</head>
+<body>
+
+<div class="cp_wrap">
+	<div class="cp_header"><img src="../images/temp/top.png" alt="샘플" /></div><!-- 개발시 삭제 -->
+
+	<div class="header_tab">
+		<ul class="col3">
+			<li class="on"><span>쿠폰팩</span></li>
+			<li><span>쿠폰 관리</span></li>
+			<li><span>내 구독 쿠폰</span></li>
+		</ul>
+	</div>
+
+<style>
+.slider_nav_wrap {padding:20px 0 10px; font-size:0;}
+.slider-nav {}
+.slider-nav .item {text-align:center;}
+.slider-nav .item .inner {display:inline-block; padding:0 5px; background:#fff;;}
+.slider-nav button {position:relative; min-width:60px; background-color:#fff; border:1px solid #ddd; border-radius:100%; overflow:hidden; transition:all 0.2s ease;}
+/* .slider-nav button span img {display:none;} */
+.slider-nav .slick-track {display:flex; align-items:center;}
+.slider-nav .slick-slide {transform:scale(0.93333); transition: all 0.2s ease; }
+.slider-nav .slick-slide img {filter:brightness(110%); opacity:0.75; transition: all 0.2s ease;}
+.slider-nav .slick-slide.slick-center {transform:scale(1); opacity:1;}
+.slider-nav .slick-current button {border-width:2px; border-color:#333 !important;}
+.slider-nav .slick-current.slick-active {transform:scale(1);}
+.slider-nav .slick-current.slick-active img {filter:brightness(100%); opacity:1;}
+</style>
+
+	<div class="slider_nav_wrap">
+		<div class="slider-nav">
+			<div class="item">
+				<div class="inner"><button type="button" class="btn_click"><span><img src="../images/temp/logo_angelius.png" alt="이미지1"></span></button></div>
+			</div>
+			<div class="item">
+				<div class="inner"><button type="button" class="btn_click"><span><img src="../images/temp/logo_gs25.png" alt="이미지2"></span></button></div>
+			</div>
+			<div class="item">
+				<div class="inner"><button type="button" class="btn_click"><span><img src="../images/temp/logo_pb.png" alt="이미지3"></span></button></div>
+			</div>
+			<div class="item">
+				<div class="inner"><button type="button" class="btn_click"><span><img src="../images/temp/logo_gsauto.png" alt="이미지4"></span></button></div>
+			</div>
+			<div class="item">
+				<div class="inner"><button type="button" class="btn_click"><span><img src="../images/temp/logo_ediya.png" alt="이미지5"></span></button></div>
+			</div>
+			<div class="item">
+				<div class="inner"><button type="button" class="btn_click"><span><img src="../images/temp/logo_kream.png" alt="이미지6"></span></button></div>
+			</div>
+			<div class="item">
+				<div class="inner"><button type="button" class="btn_click"><span><img src="../images/temp/logo_cu.png" alt="이미지7"></span></button></div>
+			</div>
+		</div>
+	</div>
+	<!-- // slider_nav_wrap -->
+
+	
+<style>
+.slider_for_wrap {height:0;  padding:0 20px; transition:all 0.2s ease; overflow:hidden;}
+.slider_for_wrap div.item {position:relative; border-radius:14px; overflow:hidden;}
+.slider_for_wrap div.item div.img {position:relative;}
+.slider_for_wrap div.item div.img button {background-color:#17355E;}
+.slider_for_wrap div.item div.img button span {display:flex; justify-content:center; align-items:center; height:48px; border-radius:8px 2px; color:#fff; overflow:hidden;}
+.slider_for_wrap .slider-for .slick-slide {transform:scale(0.9); transition: all 0.2s ease;}
+.slider_for_wrap .slider-for .slick-slide > div {line-height:1;}
+.slider_for_wrap .slider-for .slick-slide.slick-current {transform:scale(1);}
+.slider_for_wrap.active {height:auto; margin-top:10px;}
+.slider_for_wrap img {vertical-align:top;}
+</style>
+	<div class="slider_for_wrap active">
+		<div class="slider-for">
+			<div class="item">
+				<div class="img">
+					<img src="../images/temp/img_gsctmain.png" alt="이미지1">
+					<button type="button"><span>구독하기</span></button>
+				</div>
+			</div>
+			<div class="item">
+				<div class="img">
+					<img src="../images/temp/img_ediyamain.png" alt="이미지2">
+					<button type="button"><span>구독하기</span></button>
+				</div>
+			</div>
+			<div class="item">
+				<div class="img">
+					<img src="../images/temp/img_gsctmain.png" alt="이미지3">
+					<button type="button"><span>구독하기</span></button>
+				</div>
+			</div>
+			<div class="item">
+				<div class="img">
+					<img src="../images/temp/img_ediyamain.png" alt="이미지4">
+					<button type="button"><span>구독하기</span></button>
+				</div>
+			</div>
+			<div class="item">
+				<div class="img">
+					<img src="../images/temp/img_gsctmain.png" alt="이미지5">
+					<button type="button"><span>구독하기</span></button>
+				</div>
+			</div>
+			<div class="item">
+				<div class="img">
+					<img src="../images/temp/img_ediyamain.png" alt="이미지6">
+					<button type="button"><span>구독하기</span></button>
+				</div>
+			</div>
+			<div class="item">
+				<div class="img">
+					<img src="../images/temp/img_gsctmain.png" alt="이미지7">
+					<button type="button"><span>구독하기</span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // slider_for_wrap -->
+
+	<div style="padding:20px 18px;">
+		<img src="../images/temp/sam_list.png" alt="">
+	</div>
+
+
+	
+
+	<div class="bnr">
+		<a href="#g"><img src="../images/temp/img_banner1.png" alt="PASS 쿠폰팩 가입하고 무료쿠폰 받아가세요~"></a>
+	</div>
+
+	<div class="couponType_list_wrap">
+		<ul class="couponType_list">
+			<li>
+				<div class="couponType_item">
+					<dl>
+						<dt class="tit"><strong>편의점 쿠폰팩</strong></dt>
+						<dd class="txt"><span>주유/세차/정비/ 할인</span></dd>
+						<!-- <dd class="img"><span><img src="../images/icon_car.png" alt="자동차 쿠폰팩"></span></dd> -->
+						<dd class="img">
+							<span><img src="../images/temp/ico_gs25.png" alt="GS25"></span>
+							<span><img src="../images/ico_free.png" alt="무료팩"></span>
+						</dd>
+					</dl>
+					<div>
+						<p class="couponPrice"><span>월</span><strong>9,900</strong><span>원</span></p>
+						<p class="couponSale"><strong>93</strong><span>%</span></p>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="couponType_item">
+					<dl>
+						<dt class="tit"><strong>쇼핑 쿠폰팩</strong></dt>
+						<dd class="txt"><span>기프트카드/무료배송 쿠폰기프트카드/무료배송 쿠폰기프트카드/무료배송 쿠폰기프트카드/무료배송 쿠폰기프트카드/무료배송 쿠폰</span></dd>
+						<!-- <dd class="img"><span><img src="../images/icon_shopping.png" alt="쇼핑 쿠폰팩"></span></dd> -->
+						<dd class="img">
+							<span><img src="../images/temp/ico_homeplus.png" alt="홈플러스"></span>
+							<span><img src="../images/ico_free.png" alt="무료팩"></span>
+						</dd>
+					</dl>
+					<div>
+						<p class="couponPrice"><span>월</span><strong>9,900</strong><span>원</span></p>
+						<p class="couponSale"><strong>93</strong><span>%</span></p>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="couponType_item">
+					<dl>
+						<dt class="tit"><strong>영화 쿠폰팩</strong></dt>
+						<dd class="txt"><span>영화 할인/음료 무료 쿠폰</span></dd>
+						<!-- <dd class="img"><span><img src="../images/icon_movie.png" alt="영화 쿠폰팩"></span></dd> -->
+						<dd class="img">
+							<span><img src="../images/temp/ico_cgv.png" alt="CGV"></span>
+							<span><img src="../images/ico_free.png" alt="무료팩"></span>
+						</dd>
+					</dl>
+					<div>
+						<p class="couponPrice"><span>월</span><strong>9,900</strong><span>원</span></p>
+						<p class="couponSale"><strong>93</strong><span>%</span></p>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="couponType_item">
+					<dl>
+						<dt class="tit"><strong>커피 쿠폰팩</strong></dt>
+						<dd class="txt"><span>커피 무료/할인 쿠폰</span></dd>
+						<!-- <dd class="img"><span><img src="../images/icon_coffee.png" alt="커피 쿠폰팩"></span></dd> -->
+						<dd class="img">
+							<span><img src="../images/temp/ico_krispy.png" alt="크리스피"></span>
+							<span><img src="../images/ico_free.png" alt="무료팩"></span>
+						</dd>
+					</dl>
+					<div>
+						<p class="couponPrice"><span>월</span><strong>9,900</strong><span>원</span></p>
+						<p class="couponSale"><strong>93</strong><span>%</span></p>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="couponType_item">
+					<dl>
+						<dt class="tit"><strong>커피 쿠폰팩</strong></dt>
+						<dd class="txt"><span>커피 무료/할인 쿠폰</span></dd>
+						<!-- <dd class="img"><span><img src="../images/icon_coffee.png" alt="커피 쿠폰팩"></span></dd> -->
+						<dd class="img">
+							<span><img src="../images/temp/ico_gs25.png" alt="GS25"></span>
+							<span><img src="../images/ico_free.png" alt="무료팩"></span>
+						</dd>
+					</dl>
+					<div>
+						<p class="couponPrice"><span>월</span><strong>9,900</strong><span>원</span></p>
+						<p class="couponSale"><strong>93</strong><span>%</span></p>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="couponType_free">
+					<dl>
+						<dt class="tit"><strong>내 무료 쿠폰팩!</strong></dt>
+						<dd class="txt"><span>지금 확인하러 가기</span></dd>
+					</dl>
+				</div>
+			</li>
+			<!-- <li>
+				<div class="couponType_soon">
+					<dl>
+						<dt class="tit"><strong>COMING SOON!</strong></dt>
+						<dd class="txt"><span>새로운 혜택이 계속됩니다.</span></dd>
+						<dd class="img"><span><img src="../images/icon_comingsoon.png" alt="커밍쑨"></span></dd>
+					</dl>
+				</div>
+			</li> -->
+		</ul>
+	</div>
+
+	
+
+	<div class="bnr">
+		<a href="#g"><img src="../images/temp/img_banner2.png" alt="PASS 쿠폰팩 구독하기만 해도 선물이 와르르~"></a>
+	</div>
+
+	<div class="couponPack_footer">
+		<ul>
+			<li><a href="#g"><span class="icon"><img src="../images/ico_notice.png" alt=""></span><span class="txt">공지사항</span></a></li>
+			<li><a href="#g"><span class="icon"><img src="../images/ico_faq.png" alt=""></span><span class="txt">자주 묻는 질문</span></a></li>
+			<li><a href="#g"><span class="icon"><img src="../images/ico_guide.png" alt=""></span><span class="txt">이용안내</span></a></li>
+		</ul>
+	</div>
+
+	<footer>
+		<div class="info">
+			<p>서비스 제공사 : (주)아톤</p>
+			<p>서비스 가입/이용/해지문의 : 080-869-4273(무료)</p>
+			<p class="email">atcs@atoncorp.com</p>
+			<p>본 서비스의 쿠폰 발행은 ㈜스퀘어노트에서 대행합니다.</p>
+		</div>
+		<div class="f_alert">
+			<ul>
+				<li><p>본 서비스는 가입 즉시 서비스가 개시되는 상품으로 청약철회가 불가능합니다. (전자상거래 등에서의 소비자보호에 관한 법률 제17조 2항 5호에 따라 디지털 콘텐츠의 제공이 개시된 경우 청약철회를 제공하지 않습니다.)</p></li>
+				<li><p>PASS 쿠폰팩은 제휴 혜택 유형의 패키지 상품으로 월 1회 선택된 상품의 혜택을 쿠폰으로 제공합니다.</p></li>
+				<li><p>패키지 상품은 제휴 회사의 사정에 따라 변경될 수 있습니다.</p></li>
+			</ul>
+		</div>
+	</footer>
+
+</div><!-- // cp_wrap -->
+
+<style>
+.layer.categItem {display:none; position:fixed; bottom:0; left:0; width:100%; color:#fff; text-align:center; opacity:0; transition:all 0.5s ease;}
+.layer.categItem.active {opacity:1; animation: test123 0.2s 1 forwards;}
+@keyframes test123 {
+	0% {opacity:0; transform:translateY(20px);}
+	100% {opacity:1; transform:translateY(0px);}
+	
+}
+.layer.categItem div.img {padding:20px;}
+.layer.categItem div.img img {max-width:100%;}
+.layer.categItem span {display:inline-block; position:absolute; top:20%; left:20%; padding:20px; background-color:rgba(255,0,0,0.5); border-radius:3px; font-size:24px; font-weight:bold; transform:translate(-50%,-50%);}
+.layer.categItem button.btn_closexx {position:absolute; top:16px; right:16px; width:30px; height:30px; background-color:#000; border-radius:100%;}
+.layer.categItem button.btn_closexx::before,
+.layer.categItem button.btn_closexx::after {content:""; display:block; position:absolute; top:50%; left:50%; width:70%; height:2px; background-color:#fff;}
+.layer.categItem button.btn_closexx::before {transform:translate(-50%,-50%) rotate(45deg);}
+.layer.categItem button.btn_closexx::after {transform:translate(-50%,-50%) rotate(-45deg);}
+</style>
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/slick.js"></script>
+<!-- <script src="../js/jquery-1.12.4.min.js"></script> -->
+
+<script src="../js/temp.js"></script>
+
+<script>
+
+$('.slider-for').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  infinite: true,
+  centerMode: false,
+//   fade: true,
+  asNavFor: '.slider-nav',
+});
+$('.slider-nav').slick({
+	slidesToShow: 5,
+	slidesToScroll: 1,
+	asNavFor: '.slider-for',
+	dots: false,
+	arrows: false,
+	centerMode: true,
+	focusOnSelect: true,
+	infinite: true,
+	autoplay: true,
+	autoplaySpeed: 1000,
+	centerPadding: '20px',
+	responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 5
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '20px',
+        slidesToShow: 5
+      }
+    },
+	{
+      breakpoint: 321,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 3
+      }
+    },
+	
+  ]
+});
+
+
+// let btnToggle = document.querySelector(".btn_toggle");
+// btnToggle.addEventListener("click", function(){
+// 	btnToggle.classList.toggle("active");
+// 	document.querySelector(".slider_for_wrap").classList.toggle("active")
+// })
+</script>
+</body>
+</html>

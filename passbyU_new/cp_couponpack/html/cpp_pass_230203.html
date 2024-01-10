@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>PASS by U+</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/cp_common.css">
+
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=block">
+<style>
+
+</style>
+</head>
+
+<body>
+
+<div class="cp_wrap">
+
+	<div class="cpp_pass_wrap">
+
+		<div class="cpp_pass_tit">
+			<p class="tit">구독하면 혜택받는 PASS 쿠폰팩!</p>
+			<p class="subtit">이용할수록 커지는 혜택을 확인하세요.</p>
+		</div><!-- // cpp_pass_tit -->
+	
+		<div class="cpp_pass_visual">
+			<div style="display:flex; flex-direction:column; justify-content:space-between;">
+				<div class="box box1">
+					<div>
+						<p>
+							<span>PASS 고객 누구나</span>
+							<strong>무료 혜택!</strong>
+						</p>
+						<span class="em">기본 15,000원 혜택</span>
+					</div>
+					<div class="icon_wrap">
+						<span><img src="../images/cpp_pass/ico_golf_50.png" alt="golf"></span>
+						<span><img src="../images/cpp_pass/ico_akmall_50.png" alt="akmall"></span>
+					</div>
+				</div>
+				<div class="box box2">
+					<div>
+						<p>
+							<span>구독하면</span>
+							<strong>혜택 <i>더</i>드림!</strong>
+						</p>
+						<span class="em">최대 35,000원 혜택</span>
+					</div>
+					<div class="icon_wrap">
+						<span><img src="../images/cpp_pass/ico_gs25_50.png" alt="GS25"></span>
+						<span><img src="../images/cpp_pass/ico_cu_50.png" alt="CU"></span>
+						<span><img src="../images/cpp_pass/ico_cgv_50.png" alt="CGV"></span>
+						<span><img src="../images/cpp_pass/ico_711_50.png" alt="7ELEVEN"></span>
+						<span><img src="../images/cpp_pass/ico_krispy_50.png" alt="krispy"></span>
+						<span><img src="../images/cpp_pass/ico_angel_50.png" alt="angelinus"></span>
+						<span><img src="../images/cpp_pass/ico_homplus_50.png" alt="Homeplus"></span>
+					</div>
+				</div>
+			</div>
+			<div class="box3">
+				<div class="inner">
+					<div class="graph">
+						<div class="ground">
+							<div>
+								<i>혜택</i>
+								<p>
+									<strong><em>50,000</em>원</strong><span>/월</span>
+								</p>
+							</div>
+							<span class="arrow"><img src="../images/cpp_pass/cpp_pass_arrow.png" alt="화살표"></span>
+						</div>
+						<div class="over">
+							<div>
+								<i>이용료</i>
+								<p>
+									<strong><em id="myTargetElement">50,000</em>원</strong><span>/월</span>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="sale">최대 40,100원 혜택</div>
+				</div>
+			</div>
+		</div><!-- // cpp_pass_visual -->
+	
+		<div class="mainBox3">
+			<div class="btnGroup">
+				<button type="button"><span>누르고 혜택받기</span></button>
+				<button type="button"><span>이벤트 확인하기</span></button>
+			</div>
+			<div class="inbox">
+				<div><strong><img src="../images/cpp_pass/icon_hand.png" alt="아이콘"></strong>지금 주목받는 쿠폰팩 TOP3</div>
+				<ol>
+					<li>1. GS25쿠폰팩</li>
+					<li>2. CU 쿠폰팩</li>
+					<li>3. 홈플러스쿠폰팩</li>
+				</ol>
+			</div>
+		</div><!-- // mainBox3 -->
+	
+		<div class="cpp_pass_alert">
+			<dl>
+				<dt>유의사항</dt>
+				<dd>
+					<p>- 쿠폰팩별 구성 및 할인폭은 상이할 수 있습니다.</p>
+				</dd>
+			</dl>
+		</div><!-- // cpp_pass_alert -->
+
+	</div><!-- // cpp_pass_wrap -->
+
+
+	
+</div><!-- // cp_wrap -->
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- <script src="../js/jquery-1.12.4.min.js"></script> -->
+
+<script src="../js/temp.js"></script>
+<script src="../js/countUp.min.js"></script>
+
+
+<script>
+	var options = {
+		useEasing : true, 
+		useGrouping : true, 
+		separator : ',', 
+		decimal : '.', 
+		prefix : '', 
+		suffix : '' 
+	};
+
+	/**
+	 [0] 카운트를 보여줄 ID
+	 [1] 시작 카운트
+	 [2] 종료 카운트
+	 [3] 소수점
+	 [4] 시작 ~ 종료 까지 실행 시간
+	 [5] 옵션
+	 */
+	var demo = new CountUp("myTargetElement", 50000, 9900, 0, 1.5, options);
+
+	window.onload = (event) => {
+		setTimeout(function(){
+			document.querySelector(".over").classList.add("active")
+			demo.start();
+		}, 400)
+	};
+
+	let btns = document.querySelectorAll("button");
+	btns.forEach(function(item){
+		item.addEventListener("click", function(){
+			alert(item.textContent)
+		})
+	})
+</script>
+
+</body>
+</html>
