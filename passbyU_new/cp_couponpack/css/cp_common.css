@@ -21,6 +21,13 @@ html.fixed {height:100%; overflow:hidden;}
 .mb50{margin-bottom:50px;}.mb51{margin-bottom:51px;}.mb52{margin-bottom:52px;}.mb53{margin-bottom:53px;}.mb54{margin-bottom:54px;}.mb55{margin-bottom:55px;}.mtb6{margin-bottom:56px;}.mb57{margin-bottom:57px;}.mb58{margin-bottom:58px;}.mb59{margin-bottom:59px;}
 .mb60{margin-bottom:60px;}.mb61{margin-bottom:61px;}.mb62{margin-bottom:62px;}.mb63{margin-bottom:63px;}.mb64{margin-bottom:64px;}.mb65{margin-bottom:65px;}.mtb6{margin-bottom:66px;}.mb67{margin-bottom:67px;}.mb68{margin-bottom:68px;}.mb69{margin-bottom:69px;}
 
+/* 가로 스크롤 형식 공통 */
+.scroll-wrapper {overflow-y:hidden; overflow-x:auto; -webkit-overflow-scrolling:touch;}
+.scroll-wrapper::-webkit-scrollbar {display:none !important;}
+.scroll-wrapper .scroll {display:-webkit-inline-box; display:-webkit-inline-flex; display:inline-flex;}
+.scroll-wrapper .scroll .item {white-space:nowrap;} /* 구분 칸 */
+/* 가로 스크롤 형식 공통 */
+
 .header_tab {position:sticky; top:0; background-color:#fff; z-index:2}
 .header_tab ul {display:flex; position:relative; width:100%;}
 .header_tab ul::after {content:""; display:block; position:absolute; bottom:0; left:0; width:100%; border-bottom:1px solid #e7e7e7;}
@@ -771,6 +778,171 @@ footer div.f_alert p::before {content:"·"; display:block; position:absolute; to
 .cpp_pass_wrap .cpp_pass_alert dd p {color:#999; font-size:0.875em;}
 */
 
+/* pass 쿠폰팩 혜택+ */
+.cpp_pass_wrap .cpp_pass_slick_wrap {padding:10px 0; background-color:#f5f5f5;}
+.cpp_pass_wrap .cpp_pass_slick_wrap * {line-height:1;}
+.cpp_pass_wrap .cpp_pass_slick_wrap .slick-slide {box-shadow:0 3px 10px rgba(0,0,0,0.08); border-radius:0.875em; overflow:hidden;}
+.cpp_pass_wrap .cpp_pass_slick_wrap .slick-slide {transform:scale(0.85); transition: all 0.2s ease;}
+.cpp_pass_wrap .cpp_pass_slick_wrap .slick-slide.slick-current {transform:scale(1);}
+.cpp_pass_wrap .cpp_pass_slick_wrap .slick-track {padding:10px 0;}
+
+.cpp_pass_wrap .other_wrap {padding:0 18px 20px; background-color:#f5f5f5;}
+.cpp_pass_wrap .other_wrap .other_link {background-color:#fff; border-radius:6px; overflow:hidden;}
+.cpp_pass_wrap .other_wrap .other_link + .other_link {margin-top:12px;}
+
+.cpp_pass_wrap .other_item {display:flex; align-items:center; gap:8px; position:relative; height:60px; padding:0 18px; background-color:#fff;}
+.cpp_pass_wrap .other_item span.icon {display:block; width:24px; height:24px; min-width:24px;}
+.cpp_pass_wrap .other_item strong.txt {color:#000; font-size:16px; font-weight:bold;}
+.cpp_pass_wrap .other_item span.arrow {position:absolute; top:50%; right:18px; width:24px; height:24px; transform:translateY(-50%);}
+.cpp_pass_wrap .other_item button.btn_toggle {position:absolute; top:50%; right:18px; width:24px; height:24px; transform:translateY(-50%) rotate(180deg);}
+.cpp_pass_wrap .other_item button.btn_toggle.active {transform:translateY(-50%) rotate(0deg);}
+.cpp_pass_wrap .other_content {padding-bottom:18px;}
+.cpp_pass_wrap .other_content .item {display:flex; align-items:center; gap:12px; padding-left:50px;;}
+.cpp_pass_wrap .other_content .item + .item {margin-top:8px;}
+.cpp_pass_wrap .other_content .item span.icon {width:60px; min-width:60px;}
+.cpp_pass_wrap .other_content .item div.txt_wrap {}
+.cpp_pass_wrap .other_content .item div.txt_wrap div.tit {color:#000; font-size:14px; line-height:1.42857em;}
+.cpp_pass_wrap .other_content .item div.txt_wrap p.txt {color:#888; font-size:12px; line-height:1.5em;}
+.cpp_pass_wrap #steadySeller {display:none;}
+.cpp_pass_wrap #steadySeller.active {display:block;}
+
+/* pass 메인 쿠폰팩 */
+
+
+/* 24.01 UI 변경 */
 .header_tab {padding:0 21px;}
 .header_tab ul {gap:18px;}
 .header_tab ul li {width:auto;}
+
+
+.coupon_main_new_wrap {background-color:#f5f5f5; padding-bottom:11px;}
+/* 쿠폰팩 메인 배너 트리거 */
+.home_slider_nav_wrap {padding:20px 0px; font-size:0;}
+.home_slider-nav .item {text-align:center;}
+.home_slider-nav .item .inner {display:inline-block; padding:0 5px;}
+.home_slider-nav button {position:relative; min-width:60px; background-color:#fff; padding:1px; background-color:none; border-radius:100%; overflow:hidden; transition:all 0.2s ease;}
+.home_slider-nav .slick-track {display:flex; align-items:center;}
+.home_slider-nav .slick-slide {transform:scale(0.9); transition: all 0.2s ease; }
+.home_slider-nav .slick-slide img {transition: all 0.2s ease;}
+.home_slider-nav .slick-slide.slick-current {transform:scale(1);}
+.home_slider-nav .slick-current button {padding:2.5px; background:linear-gradient(#6250ff 0, #58A3ff 50%, #50EBff 100%)}
+/* 쿠폰팩 메인 배너 트리거 */
+
+/* 쿠폰팩 메인 배너 컨텐츠 */
+.home_slider_for_wrap {height:0;  padding:0 20px; transition:all 0.2s ease; overflow:hidden;}
+.home_slider_for_wrap div.item {position:relative; border-radius:10px; overflow:hidden;}
+.home_slider_for_wrap div.item div.img_wrap {position:relative;}
+.home_slider_for_wrap div.item div.img_wrap button.alert {position:absolute; top:67.2043%; left:5.55555%; width:17.28395%; border-radius:100px; line-height:1; overflow:hidden;}
+.home_slider_for_wrap div.item div.img_wrap button.alert span {}
+.home_slider_for_wrap div.item button.subscribe {height:60px; background-color:#000;}
+.home_slider_for_wrap div.item button.subscribe strong {display:flex; justify-content:center; align-items:center; height:48px; border-radius:8px 2px; color:#fff; font-size:1.125em; overflow:hidden;}
+.home_slider_for_wrap .home_slider-for .slick-slide {transform:scale(0.9); transition: all 0.2s ease;}
+.home_slider_for_wrap .home_slider-for .slick-slide > div {line-height:1;}
+.home_slider_for_wrap .home_slider-for .slick-slide.slick-current {transform:scale(1);}
+.home_slider_for_wrap.active {height:auto;}
+.home_slider_for_wrap img {vertical-align:top;}
+/* // 쿠폰팩 메인 배너 컨텐츠 */
+
+
+/* 홈 배너 유의사항 */
+.coupon_alert {}
+.coupon_alert .layer_inner {position:fixed; top:50%; left:0; right:0; width:90%; height:auto; max-height:80vh; margin:0 auto; transform:translateY(-50%); background-color:#fff; border-radius:10px; z-index:10; overflow:auto;;}
+.coupon_alert .layer_inner div.layer_conner {width:100%;}
+.coupon_alert .layer_inner div.layer_conner div.tit {display:flex; justify-content:center; align-items:center; position:-webkit-sticky; position:sticky; top:0; left:0; width:100%; height:48px; background-color:#fff; text-align:center;}
+.coupon_alert .layer_inner div.layer_conner div.tit strong {color:#000; font-size:1em;}
+.coupon_alert .layer_inner div.layer_conner div.content {padding:10px; text-align:left; overflow-y:auto; white-space:pre-line; font-size:0.8125em;}
+/* // 홈 배너 유의사항 */
+
+
+/* 인기 쿠폰팩 */
+.favorite_wrap {padding-top:12px; background-color:#f5f5f5;}
+.favorite_wrap div.tit {display:flex; align-items:center; height:60px; padding:0 18px;}
+.favorite_wrap div.tit span.icon {display:block; width:24px; height:24px; }
+.favorite_wrap div.tit strong {padding-left:8px; font-size:16px; font-weight:bold;}
+.favorite_wrap .list {display:flex; align-items:center; gap:10px; padding:0;}
+.favorite_wrap .list > div {line-height:1;}
+.favorite_wrap .list .item {line-height:1; border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.08);}
+.favorite_wrap .list .item button {width:auto; height:auto;}
+.favorite_wrap .list .item img {display:block; width:174px;}
+.favorite_wrap .list .slick-slide {padding:0 0 13px 18px; overflow:hidden;}
+/* // 인기 쿠폰팩 */
+
+
+/* 카테고리별 쿠폰팩 */
+.category_wrap .home_category_tab {padding:24px 18px;}
+.category_wrap .home_category_tab li {display:inline-block;;}
+.category_wrap .home_category_tab li + li {padding-left:6px;}
+.category_wrap .home_category_tab button {width:auto; height:36px; padding:0 1em; border:1px solid #ddd; border-radius:18px;}
+.category_wrap .home_category_tab button span {font-size:14px; white-space:nowrap;}
+.category_wrap .home_category_tab button.active {background-color:#000; border-color:transparent;}
+.category_wrap .home_category_tab button.active span {font-weight:bold; color:#fff;}
+
+.category_wrap .tab_content {padding:0 18px;}
+.category_wrap .tab_content .content_group {display:flex; flex-direction:column; width:100%; gap:10px;}
+.category_wrap .tab_content button.btn_more {height:48px; margin-top:20px; background-color:#F0F2F4; border-radius:24px;}
+.category_wrap .tab_content button.btn_more span {color:#000; font-size:1em;}
+/* 카테고리별 쿠폰팩 */
+
+
+/* 새로 나온 쿠폰팩 */
+.new_coupon_wrap {padding-top:12px; background-color:#fff;}
+.new_coupon_wrap div.tit {display:flex; align-items:center; height:60px; padding:0 18px;}
+.new_coupon_wrap div.tit span.icon {display:block; width:24px; height:24px; }
+.new_coupon_wrap div.tit strong {padding-left:8px; font-size:16px; font-weight:bold;}
+.new_coupon_wrap .list {display:flex; align-items:center; gap:10px; padding:0;}
+.new_coupon_wrap .list > div {line-height:1;}
+.new_coupon_wrap .list .item {line-height:1; border-radius:10px;}
+.new_coupon_wrap .list .item button {width:auto; height:auto;}
+.new_coupon_wrap .list .item img {display:block; width:174px;}
+.new_coupon_wrap .list .slick-slide {padding:0 0 0 18px; overflow:hidden;}
+/* // 새로 나온 쿠폰팩 */
+
+
+/* 24.01 UI개편 텍스트 배너 수정(홈,전체) */
+.sale_item {display:flex; align-items:center; position:relative; padding:24px 20px; border:1px solid #f0f0f0; border-radius:6px; overflow:hidden;}
+.sale_item .logo {min-width:50px; width:50px; max-width:50px;}
+.sale_item .logo img {border-radius:100%; width:50px; height:50px;}
+.sale_item .txt_wrap {flex:1; position:relative; padding-left:8.5%;}
+/* .sale_item .txt_wrap.line::before {content:""; display:block; position:absolute; top:-15px; bottom:-15px; left:5%; width:0; border-left:1px solid #f0f0f0;} */
+.sale_item .txt_wrap p.tit {display:flex; align-items:flex-end; gap:4px;}
+.sale_item .txt_wrap p.tit strong {color:#000; font-size:16px; line-height:24px; font-weight:bold;}
+.sale_item .txt_wrap p.tit span {position:relative; top:-1px; padding-left:0.92307em; color:#888; font-size:13px; line-height:19px; font-weight:bold;}
+.sale_item .txt_wrap p.tit span::before, 
+.sale_item .txt_wrap p.tit span::after {content:""; display:block; position:absolute; top:50%; left:2px; width:8px; height:2px; background-color:#ddd;}
+.sale_item .txt_wrap p.tit span::before {transform:translateY(-50%);}
+.sale_item .txt_wrap p.tit span::after {transform:translateY(-50%) rotate(-90deg);}
+.sale_item .txt_wrap div {display:flex; justify-content:flex-start; align-items:center; gap:4px; margin-top:6px;}
+.sale_item .txt_wrap .couponSale {display:inline-flex; align-items:baseline; min-width:46px; height:20px; padding:0 14px 0 4px; background:#fc3a4a url('../images/icon_arrow_dn.png') no-repeat right 4px bottom 5px / 7px auto; border-radius:3px; color:#fff;}
+.sale_item .txt_wrap .couponSale strong {font-size:13px}
+.sale_item .txt_wrap del {color:#bbb; font-size:12px; font-weight:300;}
+.sale_item .txt_wrap .couponPrice strong {color:#000; font-size:14px;}
+.sale_item span.arrow {position:absolute; top:50%; right:18px; width:16px; height:16px; background:url('../images/btn_cp_r.png') no-repeat right top / contain; color:transparent; font-size:10px; overflow:hidden; transform:translateY(-50%);}
+.sale_item.line .txt_wrap::before {content:""; display:block; position:absolute; top:-15px; bottom:-15px; left:5%; width:0; border-left:1px solid #f0f0f0;}
+/* // 24.01 UI개편 텍스트 배너 수정 */
+
+.couponpack_all_wrap .pageTit {background-color:#f5f5f5;}
+
+/* 쿠폰팩 전체 트리거 */
+.allCoupon_triger_wrap {padding:0 18px 20px; background-color:#f5f5f5;}
+.allCoupon_triger_wrap .tab_trigers {}
+.allCoupon_triger_wrap .tab_trigers li + li {margin-left:12px;}
+.allCoupon_triger_wrap button {}
+.allCoupon_triger_wrap button div.img {display:inline-block; position:relative; width:60px; height:60px; border-radius:100%; line-height:1; background-color:#fff; overflow:hidden;}
+.allCoupon_triger_wrap button div.img span {position:absolute; top:50%; left:50%; width:55px; height:55px; border-radius:100%; transform:translate(-50%,-50%); overflow:hidden;}
+.allCoupon_triger_wrap button div.img img {position:absolute; top:50%; left:50%; width:60px; max-width:unset; height:60px; max-height:unset; transform:translate(-50%,-50%);}
+.allCoupon_triger_wrap button span {display:block; color:#333; font-size:12px; line-height:1.5em; text-align:center;}
+.allCoupon_triger_wrap button.active div.img {background:linear-gradient(#6250ff 0, #58A3ff 50%, #50EBff 100%)}
+.allCoupon_triger_wrap button.active span {color:#6250ff; font-weight:bold;}
+/* // 쿠폰팩 전체 트리거 */
+
+
+/* 전체카테고리 아이템 */
+.category_all_wrap {padding:20px 18px 0;}
+.category_all_wrap .list {display:flex; flex-direction:column; width:100%; gap:10px;}
+.category_all_wrap .list .item {position:relative; overflow:hidden;}
+.category_all_wrap .list .item::before,
+.category_all_wrap .list .item::after {content:""; display:block; position:absolute; top:50%; width:42px; height:42px; background-color:#fff; border:1px solid #f0f0f0; border-radius:100%; transform:translateY(-50%); z-index:1;}
+.category_all_wrap .list .item::before {left:-30px;}
+.category_all_wrap .list .item::after {right:-30px;}
+/* // 전체카테고리 아이템 */
+/* 24.01 UI 변경 */
