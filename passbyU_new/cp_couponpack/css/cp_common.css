@@ -879,7 +879,7 @@ footer div.f_alert p::before {content:"·"; display:block; position:absolute; to
 .category_wrap .home_category_tab li {display:inline-block;;}
 .category_wrap .home_category_tab li + li {padding-left:6px;}
 .category_wrap .home_category_tab button {width:auto; height:36px; padding:0 1em; border:1px solid #ddd; border-radius:18px;}
-.category_wrap .home_category_tab button span {font-size:14px; white-space:nowrap;}
+.category_wrap .home_category_tab button span {color:#000; font-size:14px; white-space:nowrap;}
 .category_wrap .home_category_tab button.active {background-color:#000; border-color:transparent;}
 .category_wrap .home_category_tab button.active span {font-weight:bold; color:#fff;}
 
@@ -933,11 +933,10 @@ footer div.f_alert p::before {content:"·"; display:block; position:absolute; to
 .allCoupon_triger_wrap .tab_trigers {}
 .allCoupon_triger_wrap .tab_trigers li + li {margin-left:12px;}
 .allCoupon_triger_wrap button {}
-.allCoupon_triger_wrap button div.img {display:inline-block; position:relative; width:60px; height:60px; border-radius:100%; line-height:1; background-color:#fff; overflow:hidden;}
-.allCoupon_triger_wrap button div.img span {position:absolute; top:50%; left:50%; width:55px; height:55px; border-radius:100%; transform:translate(-50%,-50%); overflow:hidden;}
-.allCoupon_triger_wrap button div.img img {position:absolute; top:50%; left:50%; width:60px; max-width:unset; height:60px; max-height:unset; transform:translate(-50%,-50%);}
+.allCoupon_triger_wrap button div.img {display:inline-block; position:relative; width:60px; height:60px; padding:0; border-radius:100%; line-height:1; background-color:#fff; overflow:hidden;}
+.allCoupon_triger_wrap button div.img span {}
 .allCoupon_triger_wrap button span {display:block; color:#333; font-size:12px; line-height:1.5em; text-align:center;}
-.allCoupon_triger_wrap button.active div.img {background:linear-gradient(#6250ff 0, #58A3ff 50%, #50EBff 100%)}
+.allCoupon_triger_wrap button.active div.img {padding:3px; background:linear-gradient(#6250ff 0, #58A3ff 50%, #50EBff 100%)}
 .allCoupon_triger_wrap button.active span {color:#6250ff; font-weight:bold;}
 /* // 쿠폰팩 전체 트리거 */
 
