@@ -663,6 +663,7 @@ p.couponSale + p.couponPrice {margin-left:6px;}
 footer {padding:1.5em 1.25em; font-size:0.8125em; background-color:#f7f7f7; color:#999999;}
 footer div.info p {line-height:1.5em;}
 footer div.info p.email a {color:#999;}
+footer div.info p a {color:#999;}
 
 footer div.f_alert {margin-top:0.75em; padding:0.75em 0 0 0; border-top:1px solid rgba(0,0,0,0.08);}
 footer div.f_alert li + li {margin-top:0.25em;}
@@ -932,9 +933,7 @@ footer div.f_alert p::before {content:"·"; display:block; position:absolute; to
 .allCoupon_triger_wrap {padding:0 18px 20px; background-color:#f5f5f5;}
 .allCoupon_triger_wrap .tab_trigers {}
 .allCoupon_triger_wrap .tab_trigers li + li {margin-left:12px;}
-.allCoupon_triger_wrap button {}
 .allCoupon_triger_wrap button div.img {display:inline-block; position:relative; width:60px; height:60px; padding:0; border-radius:100%; line-height:1; background-color:#fff; overflow:hidden;}
-.allCoupon_triger_wrap button div.img span {}
 .allCoupon_triger_wrap button span {display:block; color:#333; font-size:12px; line-height:1.5em; text-align:center;}
 .allCoupon_triger_wrap button.active div.img {padding:3px; background:linear-gradient(#6250ff 0, #58A3ff 50%, #50EBff 100%)}
 .allCoupon_triger_wrap button.active span {color:#6250ff; font-weight:bold;}
