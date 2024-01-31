@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>개인정보보호 서비스 홍보</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/ev_common.css">
+	<link rel="stylesheet" href="../css/slick.css">
+	<style>
+		.ev_240131 {background-color:#fff; overflow:hidden;}
+		.ev_240131 img {vertical-align:top; border:0; max-width:100%;}
+		.ev_240131 div {position:relative;}
+
+		.ev_240131 .privacy_slick_wrap {position:relative; padding-bottom:1.125em;}
+		.ev_240131 .privacy_slick_wrap div.list {line-height:0;}
+		.ev_240131 .privacy_slick_wrap div.list button.slick-arrow {position:absolute; top:50%; width:2.125em; height:2.125em; background:url('') no-repeat left top / contain; color:transparent; transform:translateY(-50%); z-index:10;}
+		.ev_240131 .privacy_slick_wrap div.list button.slick-prev {left:0.625em; background-image:url('../images/ev_240131_btn_prev.png');}
+		.ev_240131 .privacy_slick_wrap div.list button.slick-next {right:0.625em; background-image:url('../images/ev_240131_btn_next.png');}
+		.ev_240131 .privacy_slick_wrap div.list div.item {position:relative; padding:0 0.40625em; line-height:0;}
+		.ev_240131 .privacy_slick_wrap div.list div.item img {vertical-align:top;}
+		.ev_240131 .privacy_slick_wrap div.list div.item button {position:absolute; left:50%; bottom:13.92111%; width:16.83333em; height:2.5em; transform:translateX(-50%);}
+		.ev_240131 .privacy_slick_wrap div.list div.item button span {color:transparent;}
+		.ev_240131 .privacy_slick_wrap div.txt {margin-top:1.25em; text-align:center;}
+		.ev_240131 .privacy_slick_wrap div.txt img {width:13.1em}
+	</style>
+</head>
+
+<body>
+
+<div class="evPageWrap">
+
+	<div class="evSection">
+
+		<div class="ev_240131">
+
+			<div><img src="../images/ev_240131_img1.png" alt="ㅇㅇㅇ"></div>
+			<div><img src="../images/ev_240131_img2.png" alt="ㅇㅇㅇ"></div>
+			<div><img src="../images/ev_240131_img3.png" alt="ㅇㅇㅇ"></div>
+			<div class="privacy_slick_wrap">
+				<div class="list">
+					<div class="item">
+						<div class="img"><img src="../images/ev_240131_img4_1.png" alt="ㅇㅇㅇ"></div>
+						<button type="button"><span>이벤트 바로가기</span></button>
+					</div>
+					<div class="item">
+						<div class="img"><img src="../images/ev_240131_img4_2.png" alt="ㅇㅇㅇ"></div>
+						<button type="button"><span>이벤트 바로가기</span></button>
+					</div>
+					<div class="item">
+						<div class="img"><img src="../images/ev_240131_img4_3.png" alt="ㅇㅇㅇ"></div>
+						<button type="button"><span>이벤트 바로가기</span></button>
+					</div>
+				</div>
+			</div>
+			<div><img src="../images/ev_240131_img5.png" alt="ㅇㅇㅇ"></div>
+
+		</div><!-- // ev_240131 -->
+
+	</div><!-- // evSection -->
+
+</div><!-- // evPageWrap -->
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="../js/slick.min.js"></script>
+
+
+
+<script>
+	/* 대충 버튼 눌리면 어멋? */
+	let btns = document.querySelectorAll("button");
+	btns.forEach(function(item){
+		item.addEventListener("click", function(){
+			let img = item.querySelector("img");
+			if(img) {
+				if(img.getAttribute("title")) {
+					alert(img.getAttribute("title"))
+				} else {
+					alert(img.getAttribute("alt"))
+				}
+			} else {
+				alert(item.innerText)
+			}
+		})
+	})
+	/* // 대충 버튼 눌리면 어멋? */
+
+
+	$(document).ready(function(){
+		// $('.privacy_slick_wrap div.list').slick({
+		// 	autoplay: true,
+		// 	autoplaySpeed: 5000,
+		// 	dots: false,
+		// 	arrows: true,
+		// 	infinite: false,
+		// 	centerMode: true,
+		// 	// dotsClass: "dot",
+		// 	centerPadding: '30px',
+		// 	speed: 300,
+		// 	slidesToShow: 1
+		// });
+
+		$('.privacy_slick_wrap div.list').on('init', function(event, slick) {
+			$(".slick-prev").hide();
+		}) .slick({
+			autoplay: true,
+			autoplaySpeed: 5000,
+			dots: false,
+			arrows: true,
+			infinite: false,
+			centerMode: true,
+			// dotsClass: "dot",
+			centerPadding: '30px',
+			speed: 300,
+			slidesToShow: 1
+		})
+		.on('afterChange', function(event, slick, currentSlide) {
+			console.log(currentSlide)
+			if(currentSlide < 1) {
+				$(".slick-prev").hide();
+			} else {
+				$(".slick-prev").show();
+			}
+			if(currentSlide > 1) {
+				$(".slick-next").hide();
+			} else {
+				$(".slick-next").show();
+			}
+		});
+
+
+
+
+	})
+</script>
+
+</body>
+</html>
