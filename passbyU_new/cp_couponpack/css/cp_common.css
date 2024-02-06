@@ -29,7 +29,7 @@ html.fixed {height:100%; overflow:hidden;}
 /* 가로 스크롤 형식 공통 */
 
 .header_tab {position:sticky; top:0; background-color:#fff; z-index:2}
-.header_tab ul {display:flex; justify-content:flex-start; gap:18px; position:relative; width:100%;}
+.header_tab ul {display:flex; justify-content:flex-start; gap:18px; position:relative; width:100%; padding:0 20px;}
 .header_tab ul::after {content:""; display:block; position:absolute; bottom:0; left:0; width:100%; border-bottom:1px solid #e7e7e7;}
 /* .header_tab ul li {width:100%; text-align:center;} */
 .header_tab ul li span {display:block; position:relative; height:36px; color:#999; font-weight:700; font-size:14px; line-height:36px;}
@@ -814,7 +814,7 @@ footer div.f_alert p::before {content:"·"; display:block; position:absolute; to
 
 
 /* 24.01 UI 변경 */
-.header_tab {padding:0 21px;}
+.header_tab {/* padding:0 21px; */}
 .header_tab ul {gap:18px;}
 .header_tab ul li {width:auto;}
 
