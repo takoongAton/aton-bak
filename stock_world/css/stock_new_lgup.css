@@ -1,0 +1,42 @@
+@charset "utf-8";
+:root {
+	--main-color:#ff3a4a;
+}
+
+div.layer_dim {background-color:rgba(0,0,0,0.4);}
+div.layer.alert div.dim,
+div.layer.modal div.dim {position:fixed; top:0; right:0; bottom:0; left:0; height:100vh; background-color:rgba(0,0,0,0.4); z-index:10;}
+
+div.layer.alert {margin:0 auto;}
+div.layer.alert .layer_inner {position:fixed; top:50%; right:20px; left:20px; max-width:284px; margin:0 auto; background-color:#fff; border-radius:0.5em; overflow-y:auto; transform:translateY(-50%); z-index:10;}
+div.layer.alert div.cp_name {padding:30px 18px 0; text-align:center;}
+div.layer.alert div.cp_name strong {display:block; min-height:27px; font-size:18px; line-height:24px;}
+div.layer.alert dl.alert {padding:17px 18px 0; color:#111; text-align:center;}
+div.layer.alert dl.alert dt {margin-bottom:0.5em; font-weight:bold; line-height:1.25em;}
+div.layer.alert dl.alert dd {color:#000; font-size:14px; line-height:24px; font-weight:400; font-family:'Noto Sans KR';}
+div.layer.alert div.alert_txt {padding:17px 18px 0; text-align:center;}
+div.layer.alert div.alert_txt p {color:#000; font-size:14px; line-height:24px; font-weight:400; font-family:'Noto Sans KR';}
+
+div.btn_group {display:flex; justify-content:space-between; align-items:center; position:-webkit-sticky; position:sticky; left:0; bottom:0; width:100%; margin-top:36px; padding:0;}
+div.btn_group div {width:100%; padding:0; border-top:0.5px solid #e7e7e7}
+div.btn_group div button {width:100%; height:60px;}
+div.btn_group div button.next {background-color:#fff; color:var(--main-color); font-weight:bold;}
+div.btn_group div button.close {background-color:#fff; color:#000; font-weight:normal;}
+div.btn_group div button span {font-size:18px; line-height:1;}
+
+div.layer.modal {margin:0 auto;}
+div.layer.modal .layer_inner {max-width:284px; margin:0 auto;}
+div.layer.modal div.cp_name {padding:30px 18px 0; text-align:center;}
+div.layer.modal div.cp_name strong {display:block; min-height:27px; font-size:18px; line-height:24px;}
+div.layer.modal dl.alert {padding:17px 18px 0; color:#111; text-align:center;}
+div.layer.modal dl.alert dt {margin-bottom:0.5em; font-weight:bold; line-height:1.25em;}
+div.layer.modal dl.alert dd {color:#000; font-size:14px; line-height:24px; font-weight:400; font-family:'Noto Sans KR';}
+div.layer.modal div.alert_txt {padding:17px 18px 0; text-align:center;}
+div.layer.modal div.alert_txt p {color:#000; font-size:14px; line-height:24px; font-weight:400; font-family:'Noto Sans KR';}
+
+div.modal_btn {display:flex; justify-content:space-between; align-items:center; position:-webkit-sticky; position:sticky; left:0; bottom:0; width:100%; margin-top:36px; padding:0;}
+div.modal_btn div {width:100%; padding:0; border-top:0.5px solid #e7e7e7}
+div.modal_btn div button {width:100%; height:60px;}
+div.modal_btn div button.next {background-color:#fff; color:var(--main-color); font-weight:bold;}
+div.modal_btn div button.close {background-color:#fff; color:#000; font-weight:normal;}
+div.modal_btn div button span {font-size:18px; line-height:1;}

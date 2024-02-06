@@ -2,7 +2,7 @@
 /* html {scroll-behavior:smooth;} */
 
 :root {
-	--main-color:#20bc7d;
+	--main-color:#FF3A4A;
 	--stock-up:#fc5757;
 	--stock-dn:#5796fc;
 }
@@ -29,29 +29,21 @@ button {font-family:'Noto Sans KR';}
 	transition:box-shadow 0.3s;
 } */
 
-header {position:-webkit-sticky; position:sticky; position:relative; top:0; min-height:3em; margin-bottom:1.25em; background-color:#fff; z-index:0; /*transition:all 0.2s;*/}
+header {position:-webkit-sticky; position:sticky; top:0; margin-bottom:1.25em; background-color:#fff; z-index:0; /*transition:all 0.2s;*/}
 header h1 {height:3em; text-align:center; line-height:3em;}
-header.active {position:relative;}
-header.active div.inner {box-shadow:0 3px 6px rgba(0,0,0,0.06);}
-header div.inner {position:fixed; top:0; left:0; width:100%; background-color:#fff;}
+header.active {box-shadow:0 3px 6px rgba(0,0,0,0.06);}
 header .util-btn {position:absolute; top:0; width:3em; height:3em; background-color:#ff6600; color:#fff;}
 header .util-btn.prev,
 header .util-btn.back {left:0;}
 header .util-btn.close {right:0;}
 header .util-btn button {width:100%; height:100%; background-color:#fff;}
 header .util-btn button span {position: relative; z-index:-1;}
-
-header .util-btn.prev button::before, 
+header .util-btn.prev button::before,
 header .util-btn.back button::before {content:""; position:absolute; top:50%; left:50%; width:22.91666%; height:22.91666%; border-width:2px 0 0 2px; border-style:solid; border-color:#222; transform: rotate(-45deg) translate(-31.25%, -31.25%); transform-origin: left top;}
-
-header .util-btn.close button::before, 
+header .util-btn.close button::before,
 header .util-btn.close button::after {content:""; position:absolute; top:50%; left:50%; width:40%; height:2px; background-color:#222; border-radius:100px;}
 header .util-btn.close button::before {transform:translate(-50%,-50%) rotate(45deg)}
 header .util-btn.close button::after {transform:translate(-50%,-50%) rotate(-45deg)}
-
-@media screen and (min-width:750px) {
-	header div.inner {width:750px; left:50%; transform:translateX(-50%);}
-}
 
 .header {z-index:10;}
 .gnb {display:flex; justify-content:flex-start; gap:18px; position:relative; width:100%; padding:0 20px;}
@@ -65,8 +57,8 @@ header .util-btn.close button::after {transform:translate(-50%,-50%) rotate(-45d
 footer {padding:2.25em 1em; padding:2.25em 1em calc(constant(safe-area-inset-top) + 2.25em) 1em; background-color:rgba(221,221,221,0.55); color:#aaa; text-align:center;}
 footer a {display:inline-block; position:relative; color:#aaa; text-decoration:none;}
 footer ul.site_info {display:flex; justify-content:center; align-items:center; margin-bottom:1em;}
-footer ul.site_info li {display:flex; align-items:center;; position:relative;}
-footer ul.site_info li a {padding:0 1.70833em; font-size:0.75em;}
+footer ul.site_info li {display:flex; align-items:center;; position:relative; padding:3px;}
+footer ul.site_info li a {padding:0 1.70833em; font-size:0.70em;}
 footer ul.site_info li a strong {display:inline-block;}
 footer ul.site_info li + li::before {content:""; position:absolute; top:50%; left:0; width:1px; height:83.33333%; background-color:#ddd; transform:translateY(-50%);}
 footer a.tel {text-decoration:underline;}
@@ -75,12 +67,17 @@ footer dl dt {display:none; font-weight:bold;}
 footer dl dd {}
 /* 유료가입 버튼 */
 footer .btn {margin-top:1.5em;}
-footer .btn button {display:block; width:100%; height:3.5em; background-color:var(--main-color); border-radius:8px; color:#fff; text-align:center; overflow:hidden; box-shadow:0 5px 10px rgba(0,0,0,0.2);}
+footer .btn button {display:block; width:100%; height:3.5em; background-color:#FF3782; border-radius:8px; color:#fff; text-align:center; overflow:hidden; box-shadow:0 5px 10px rgba(0,0,0,0.2);}
 footer .btn button strong {display:block; line-height:1.25em;}
-footer .btn button span {display:block; font-size:0.75em; line-height:1.25em;}
-footer .btn.fixed {height:3.5em;}
-footer .btn.fixed button {position:fixed; bottom:2.25em; left:50%; right:1em; width:calc(100% - 2em); max-width:718px; transform:translateX(-50%);}
+footer .btn button span {display:block; font-size:0.75em; line-height:1.25em;;}
+/* 유료가입 버튼 고정 */
+footer .btn.fixed { height: 3.5em;}
+footer .btn.fixed  button { position: fixed;  bottom: 2.25em;  left: 50%;  right: 1em;  width: calc( 100% - 2em);  max-width: 718px;  transform: translateX( -50%);}
 
+footer .notiTxt {margin:15px 15px 0;}
+footer .notiTxt li {position:relative; padding-left:10px; line-height:16px; color:#666; font-size:0.6875em; text-align:left; word-break:keep-all;}
+footer .notiTxt li:first-child {font-weight:700}
+footer .notiTxt li span {position:absolute; top:0; left:0; line-height:16px; font-size:16px; font-weight:400}
 
 /* toTop */
 .toTop {position:fixed; right:17px; bottom:-30px; width:1.8125em; height:1.8125em; background-color:rgba(0,0,0,0.25); opacity:0; transition:0.15s all ease-in-out; z-index:1000; text-indent:-1000em; overflow:hidden;}
@@ -140,3 +137,4 @@ footer .btn.fixed button {position:fixed; bottom:2.25em; left:50%; right:1em; wi
 .event_footer {min-height:62px;}
 .event_footer .btn_wrap {position:fixed; right:0; bottom:0; left:0; padding:10px 0 0; /* background-color:#fff; */ text-align:center; z-index:1;}
 .event_footer .btn_wrap button {display:block; width:100%; height:52px; margin:0 auto; background-color:var(--main-color); color:#fff;}
+

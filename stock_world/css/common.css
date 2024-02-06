@@ -10,6 +10,7 @@
 html.flexCol {height:100%;}
 html.flexCol .wrap {display:flex; flex-direction:column; justify-content:space-between; width:100%;}
 html.flexCol .wrap section {flex:1}
+section {flex:1; padding-bottom:4em;}
 body {height:100%; font-size:16px; letter-spacing:-0.05em;}
 button {font-family:'Noto Sans KR';}
 @media screen and (max-width:360px) {
@@ -53,15 +54,12 @@ header .util-btn.close button::after {transform:translate(-50%,-50%) rotate(-45d
 }
 
 .header {z-index:10;}
-.gnb {display:flex; justify-content:space-between; position:relative; width:100%; padding:0 20px;}
+.gnb {display:flex; justify-content:flex-start; gap:18px; position:relative; width:100%; padding:0 20px;}
 .gnb::after {content:""; position:absolute; bottom:0; left:0; width:100%; height:1px; background-color:#eee;}
 .gnb li {max-width:100%; text-align:center; align-items:center;}
-.gnb li a {display:block; position:relative; height:3em; padding:0 4px; color:#111; line-height:3em; text-decoration:none; opacity:0.3;}
-.gnb li.active a {font-weight:bold; opacity:1;}
+.gnb li a {display:block; position:relative; height:auto; padding:0; color:#999; font-size:14px; line-height:36px; font-weight:bold; text-decoration:none;}
+.gnb li.active a {color:#000;}
 .gnb li.active a::before {content:""; position:absolute; bottom:0; left:0; width:100%; height:2px; background-color:#111; z-index:1;}
-
-
-section {flex:1; padding-bottom:4em;}
 
 /* 푸터 공통 */
 footer {padding:2.25em 1em; padding:2.25em 1em calc(constant(safe-area-inset-top) + 2.25em) 1em; background-color:rgba(221,221,221,0.55); color:#aaa; text-align:center;}
@@ -89,8 +87,6 @@ footer .btn.fixed button {position:fixed; bottom:2.25em; left:50%; right:1em; wi
 .toTop::before {content:""; display:block; position:absolute; top:50%; left:50%; width:22%; height:22%; border-width:2px 2px 0 0; border-style:solid;  border-color:#fff; transform:translate(-50%,-50%) rotate(-45deg);}
 .toTop.active {bottom:1em; opacity:1; border-radius:2px;}
 
-
-
 /* 가로 스크롤 형식 */
 .scroll-wrapper {overflow-y:hidden; overflow-x:auto; -webkit-overflow-scrolling:touch;}
 .scroll-wrapper::-webkit-scrollbar {display:none !important;}
@@ -100,8 +96,6 @@ footer .btn.fixed button {position:fixed; bottom:2.25em; left:50%; right:1em; wi
 @media screen and (max-width:720px) {
 
 }
-
-
 
 .stock_up {color:#ff6600; color:var(--stock-up);}
 .stock_dn {color:#0066ff; color:var(--stock-dn);}
@@ -146,3 +140,4 @@ footer .btn.fixed button {position:fixed; bottom:2.25em; left:50%; right:1em; wi
 .event_footer {min-height:62px;}
 .event_footer .btn_wrap {position:fixed; right:0; bottom:0; left:0; padding:10px 0 0; /* background-color:#fff; */ text-align:center; z-index:1;}
 .event_footer .btn_wrap button {display:block; width:100%; height:52px; margin:0 auto; background-color:var(--main-color); color:#fff;}
+
