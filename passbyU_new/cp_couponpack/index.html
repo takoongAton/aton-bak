@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>PASS 쿠폰팩</title>
+<style type="text/css">
+body {margin:0; padding:30px 20px 20px 20px; font-family:Tahoma, Sans-Serif; font-size:12px; color:#333; line-height:1;}
+h1, p, ul, th, td {margin:0; padding:0;}
+ul, li {list-style-type:none;}
+
+h1 {margin:0 0 10px 0; font-size:17px;}
+h1 > span {margin-left:10px; font-size:13px; font-weight:normal;}
+.quick *{float:left; vertical-align:middle;}
+.quick {position:fixed; right:0; top:0; padding:5px 10px; background-color:#ddd;}
+.quick p {font-weight:bold;}
+.quick li {margin:0 0 0 8px;}
+.quick li span {display:block; width:5px; padding:0 0 0 8px;}
+.link-guide {display:block; margin-bottom:10px; text-decoration:underline; font-size:13px;}
+a {color:#028086; text-decoration:underline;}
+a:hover {color:#028086; text-decoration:none;}
+a.active {color:red; font-weight:bold;}
+table {width:100%; border-collapse:collapse; border:1px solid #666;}
+tr.line1 {border-top:2px solid #666;}
+th, td {vertical-align:middle; padding:5px 0; font-size:13px;}
+th {padding:6px; font-size:12px; text-align:center; color:#fff; border:1px solid #666; background-color:var(--main-color); font-weight:normal;}
+td {padding:4px 4px 4px 10px; text-align:left; border:1px solid #eee; background-color:#fff; line-height:1.4;}
+td.chk {padding:4px 4px 4px 4px; text-align:center;}
+td p {margin:10px 0 5px 0;}
+tr:hover td{background-color:#eee;}
+.done {color:#ca0404;}
+.ing {color:#028086;}
+.notice {padding:3px 0 10px 0; text-align:right; color:#ff0303; line-height:1.4;}
+
+:root {
+	--main-color:#ff3a4a;
+}
+</style>
+	<script type="text/javascript" src="/js/lib/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var $lists = $('.menulist td').addClass('dir');
+			$lists
+				.find('td a')
+				.each(function(index){
+					var links = $(this).text();
+					$(this).attr('href', links).attr('target','_blank');
+
+				})
+				.end();
+			
+			//선택한거 파일 확인
+			$('a').on('click', function(){
+				$('a').removeClass('active');
+				$(this).addClass('active');
+			});
+		});
+	</script>
+</head>
+<!-- html body -->
+<body>
+<h1>PASS 쿠폰팩</h1>
+
+<table class="menulist">
+	<colgroup>
+		<col width="15%">
+		<col width="15%">
+		<col width="15%">
+		<col width="15%">
+		<col width="15%">
+		<col width="">
+	</colgroup>
+	<thead>
+		<tr>
+			<th scope="col">화면ID</th>
+			<th scope="col">Depth 1</th>
+			<th scope="col">Depth 1</th>
+			<th scope="col">Depth 1</th>
+			<th scope="col">파일명</th>
+			<th scope="col">비고</th>
+		</tr>
+	</thead>
+	<tbody>
+	<!-- <tr>
+		<td colspan="9" class="chk done dir"><strong>0924 : 디자인 검수 요청</strong> 0926 : 디자인 검수 완료 <br> 1004 : 기획 변경 및 추가 수정완료</td>
+	</tr> -->
+<!-- 
+		<tr class="line1">
+			<td>SSSSSSS</td>
+			<td>ㅇㅇㅇ</td>
+			<td>ㅇㅇㅇ</td>
+			<td>ㅇㅇㅇ</td>
+			<td><a target="_blank" href="./page/ㅇㅇㅇㅇ.html">ㅇㅇㅇ.html</a></td>
+			<td>-</td>
+		</tr>
+-->
+
+		<tr class="line1">
+			<td>PAAS_028</td>
+			<td>쿠폰팩 홈</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/cpp_home.html">cpp_home.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr class="">
+			<td>PAAS_028</td>
+			<td>쿠폰팩 홈</td>
+			<td>상품이 홀수인 경우</td>
+			<td>위와동일</td>
+			<td><a target="_blank" href="./html/cpp_home.html"></a></td>
+			<td><del>디자인 안나옴.</del></td>
+		</tr>
+		<tr class="">
+			<td>PAAS_029</td>
+			<td>쿠폰팩 상세</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/cpp_couponpack_detail.html">cpp_couponpack_detail.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>내 구독팩 - 사용가능</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/cpp_my_subscribe.html">cpp_my_subscribe.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>내 구독팩 - 도움말</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/cpp_my_subscribe_help.html">cpp_my_subscribe_help.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr class="">
+			<td>PAAS_030</td>
+			<td>내 구독팩 - 무료</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/cpp_my_subscribe_free.html">cpp_my_subscribe_free.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>내 구독팩 - 해지회원</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/cpp_my_subscribe_closed.html">cpp_my_subscribe_closed.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr class="">
+			<td>PAAS_033</td>
+			<td>내 구독팩 - 지난</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/cpp_my_subscribe_used.html">cpp_my_subscribe_used.html</a></td>
+			<td>-</td>
+		</tr>
+
+		<tr class="">
+			<td>PAAS_049</td>
+			<td>이용 중인 구독팩이 없는 경우</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/cpp_my_subscribe_nodata.html">cpp_my_subscribe_nodata.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>지난 쿠폰·상품권이 없는 경우</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/cpp_my_subscribe_closed_nodata.html">cpp_my_subscribe_closed_nodata.html</a></td>
+			<td>-</td>
+		</tr>
+
+		
+
+
+		<tr class="line1">
+			<td>PAAS_034</td>
+			<td>쿠폰 관리</td>
+			<td>사용 가능 쿠폰/상품권 탭</td>
+			<td></td>
+			<td><a target="_blank" href="./html/cpp_coupon_list_01.html">cpp_coupon_list_01.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr class="">
+			<td>PAAS_040</td>
+			<td></td>
+			<td>지난 쿠폰/상품권 탭</td>
+			<td></td>
+			<td><a target="_blank" href="./html/cpp_coupon_list_02.html">cpp_coupon_list_02.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td></td>
+			<td>도움말</td>
+			<td></td>
+			<td><a target="_blank" href="./html/cpp_coupon_list_03_help.html">cpp_coupon_list_03_help.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr class="">
+			<td>PAAS_050</td>
+			<td>등록된 쿠폰 ∙ 상품권이 없는 경우</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/cpp_coupon_list_04_nodata.html">cpp_coupon_list_04_nodata.html</a></td>
+			<td>-</td>
+		</tr>
+		
+		<tr class="">
+			<td>PAAS_031P</td>
+			<td>쿠폰∙상품권 상세</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/cpp_coupon_detail_01.html">cpp_coupon_detail_01.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td></td>
+			<td>사용 완료한 쿠폰/상품권</td>
+			<td></td>
+			<td><a target="_blank" href="./html/cpp_coupon_detail_02.html">cpp_coupon_detail_02.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td></td>
+			<td>사용 완료한 쿠폰/상품권</td>
+			<td></td>
+			<td><a target="_blank" href="./html/cpp_coupon_detail_03.html">cpp_coupon_detail_03.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td></td>
+			<td>기한 만료된 쿠폰/상품권</td>
+			<td></td>
+			<td><a target="_blank" href="./html/cpp_coupon_detail_04.html">cpp_coupon_detail_04.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr class="">
+			<td>PAAS_035P</td>
+			<td></td>
+			<td>쿠폰정보 수정</td>
+			<td></td>
+			<td><a target="_blank" href="./html/cpp_coupon_detail_05.html">cpp_coupon_detail_05.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td></td>
+			<td>쿠폰정보 수정</td>
+			<td>사용자등록이미지</td>
+			<td><a target="_blank" href="./html/cpp_coupon_detail_06.html">cpp_coupon_detail_06.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr class="">
+			<td>PAAS_039P</td>
+			<td>쿠폰∙상품권 상세 팝업</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/cpp_coupon_upload_01.html">cpp_coupon_upload_01.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td>쿠폰∙상품권 상세 팝업</td>
+			<td>이미지 등록했을때.</td>
+			<td></td>
+			<td><a target="_blank" href="./html/cpp_coupon_upload_02.html">cpp_coupon_upload_02.html</a></td>
+			<td>cpp_coupon_detail_06.html과 같은파일입니다.</td>
+		</tr>
+		
+		<tr class="">
+			<td>PAAS_032P</td>
+			<td>쿠폰팩 변경</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/cpp_couponpack_change.html">cpp_couponpack_change.html</a></td>
+			<td>-</td>
+		</tr>
+
+
+		<tr class="">
+			<td>PAAS_042</td>
+			<td>공지사항</td>
+			<td>목록</td>
+			<td></td>
+			<td><a target="_blank" href="./html/cpp_notice_list.html">cpp_notice_list.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr class="">
+			<td>PAAS_043</td>
+			<td></td>
+			<td>보기</td>
+			<td></td>
+			<td><a target="_blank" href="./html/cpp_notice_view.html">cpp_notice_view.html</a></td>
+			<td>-</td>
+		</tr>
+
+		<tr class="">
+			<td>PAAS_044</td>
+			<td>자주 묻는 질문</td>
+			<td>목록</td>
+			<td></td>
+			<td><a target="_blank" href="./html/cpp_faq_list.html">cpp_faq_list.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr class="">
+			<td>PAAS_045</td>
+			<td></td>
+			<td>보기</td>
+			<td></td>
+			<td><a target="_blank" href="./html/cpp_faq_view.html">cpp_faq_view.html</a></td>
+			<td>-</td>
+		</tr>
+
+
+		<tr class="">
+			<td>PAAS_046P</td>
+			<td>쿠폰팩 서비스 이용안내</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/cpp_couponpack_guide.html">cpp_couponpack_guide.html</a></td>
+			<td>-</td>
+		</tr>
+
+		<tr class="">
+			<td>PAAS_051</td>
+			<td>무료 쿠폰팩  상세</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/cpp_coupon_freepack.html">cpp_coupon_freepack.html</a></td>
+			<td>-</td>
+		</tr>
+
+
+		<tr class="">
+			<td></td>
+			<td>팝업모음</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/cpp_layer.html">cpp_layer.html</a></td>
+			<td>-</td>
+		</tr>
+
+		<tr class="">
+			<td></td>
+			<td>에러페이지</td>
+			<td>타입1</td>
+			<td></td>
+			<td><a target="_blank" href="./html/cp_error1.html">cp_error1.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td></td>
+			<td>타입2</td>
+			<td></td>
+			<td><a target="_blank" href="./html/cp_error2.html">cp_error2.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td></td>
+			<td>타입3</td>
+			<td>시스템 점검공지</td>
+			<td><a target="_blank" href="./html/cp_error3.html">cp_error3.html</a></td>
+			<td>-</td>
+		</tr>
+
+		<tr class="">
+			<td></td>
+			<td>외부 해지 페이지</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/cp_cancel.html">cp_cancel.html</a></td>
+			<td>-</td>
+		</tr>
+
+		<tr class="">
+			<td></td>
+			<td>PASS 혜택 메인</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./html/cpp_pass.html">cpp_pass.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr class="">
+			<td></td>
+			<td></td>
+			<td>json파일적용</td>
+			<td></td>
+			<td><a target="_blank" href="./html/cpp_pass_230626_json.html">cpp_pass_230626_json.html</a></td>
+			<td>-</td>
+		</tr>
+
+		<tr class="">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./link">link_name.html</a></td>
+			<td>-</td>
+		</tr>
+
+	</tbody>
+</table>
+</body>
+<!-- //html body -->
+</html>
