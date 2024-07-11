@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>sass_test</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<!-- <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="apple-mobile-web-app-capable" content="yes" /> -->
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="../css/reset.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico">
+
+<style>
+* {margin:0; padding:0; line-height:1;}
+html,body {height:100vh;}
+ul {}
+ul::after {content:""; display:block; height:0; clear:both;}
+ul li {display:inline-block; float:left; width:100px; height:100px;}
+ul li:nth-child(odd) {background-color:#f9f9f9;}
+ul li:nth-child(even) {background-color:#f4f4f4;}
+dl ~ dl {margin-top:2em;}
+dl dt {font-weight:700;}
+</style>
+</head>
+<body>
+1
+<ul>
+	<li>1</li>
+	<li>2</li>
+	<li>3</li>
+	<li>4</li>
+	<li>5</li>
+	<li>6</li>
+	<li>7</li>
+	<li>8</li>
+	<li>9</li>
+	<li>10</li>
+</ul>
+<p class="width"></p>
+<p class="height"></p>
+<p class="vh"></p>
+
+
+<style>
+.flex {display:flex; width:100%; justify-content:space-between; align-items:center;}
+.flex > div {width:100%;}
+.flex > div:first-child {background-color:#ff6600;}
+.flex > div:last-child {background-color:#ff0066;}
+</style>
+<dl>
+	<dt>flex<br />
+		가능 : ios10, aos5.01 이상<br />
+		불가 : ios9, aos4.12 이하
+	</dt>
+	<dd>
+		<div class="flex">
+			<div>flex left</div>
+			<div>flex right</div>
+		</div>
+	</dd>
+</dl>
+
+<style>
+:root {
+	--main-color:#8ebf42;
+	/*--main-txt-color:#8ebf42;
+	--main-bg-color:#8ebf42;*/
+}
+.root {}
+.root dd {background-color:#ff6600; background-color:var(--main-color); color:#fff;}
+</style>
+<dl class="root">
+	<dt>:root {--main-color:#19A647;}</dt>
+	<dd>#ff6600 -&gt; #8ebf42
+		ios 10 이상 지원 확인<br />
+		aos 5.0 이상 지원 확인 완료.<br />
+		aos 4.12 이하 불가
+	</dd>
+</dl>
+
+
+<br />텍스트<br />텍스트<br />텍스트<br />텍스트<br />텍스트<br />텍스트<br />텍스트<br />텍스트<br />텍스트<br />텍스트<br />텍스트<br />텍스트
+<script>
+$(document).ready(function(){
+	function test(){
+		var xx = $("body").width();
+		var yy = $("body").height();
+		var zz = $(window).outerHeight();
+
+		console.log(xx);
+		console.log(yy);
+		console.log(zz);
+		$(".width").html(xx);
+		$(".height").html(yy);
+		$(".vh").html(zz);		
+	}
+	test();
+
+	$("ul li").on("click", function(){
+		test();
+	})
+})
+</script>
+<!-- <script src="../js/jquery-1.12.4.min.js"></script> -->
+</body>
+</html>
